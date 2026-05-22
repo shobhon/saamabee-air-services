@@ -37,6 +37,7 @@
             <nav id="main-nav" role="navigation" aria-label="Primary Navigation">
                 <a href="#/home" class="active" id="nav-link-home">Home</a>
                 <a href="#/destinations" id="nav-link-destinations">Destinations</a>
+                <a href="#/accommodations" id="nav-link-accommodations">Accommodations</a>
                 <a href="#/experience" id="nav-link-experience">Experience</a>
                 <a href="#/consultation" id="nav-link-consultation">Consultation</a>
                 <a href="#/search" id="nav-link-search" style="border: 1px solid var(--accent); padding: 6px 14px; border-radius: var(--border-radius); color: var(--accent);">Search Desk</a>
@@ -229,6 +230,202 @@
 
                     <!-- Target location where appJS renders listings -->
                     <div class="results-container" id="search-results-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           VIEW: ACCOMMODATIONS
+           ========================================================================== -->
+        <section id="view-accommodations" class="view-section">
+            <!-- Luxury Editorial Header -->
+            <div class="container">
+                <div class="section-header">
+                    <span>Bespoke Guest Residences</span>
+                    <h2>Premier Stays & Private Sanctuaries</h2>
+                    <p>Immerse yourself in our curated global portfolio of five-star retreats, high-end design villas, and historic royal palaces. Seamlessly integrated with your private charter schedules.</p>
+                </div>
+            </div>
+
+            <!-- Alternating Split Showcases -->
+            <div class="container split-showcase-container">
+                
+                <!-- Showcase Row 1: Cheval Blanc -->
+                <div class="split-showcase-row">
+                    <div class="showcase-img-col">
+                        <img src="cheval-blanc-st-barths-resort.jpg" alt="Luxury pool terrace at Cheval Blanc Isle de France looking onto sandy beach and palm trees" loading="lazy">
+                        <span class="showcase-badge">Signature Stay</span>
+                    </div>
+                    <div class="showcase-content-col">
+                        <span class="showcase-loc"><i class="fa-solid fa-location-dot"></i> St. Barths, Caribbean</span>
+                        <h3 class="serif-text">Cheval Blanc Private Villa</h3>
+                        <p class="showcase-desc">Perched elegantly on the pristine white sands of St. Barths, this private garden villa represents the ultimate in Caribbean luxury. Enjoy authentic, high-end interior spaces blending natural textures with seamless indoor-outdoor living, bathed in warm tropical lighting.</p>
+                        
+                        <div class="showcase-amenities">
+                            <h4>Exclusive Suite Privileges</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-water-ladder"></i> Private Ocean Plunge Pool</li>
+                                <li><i class="fa-solid fa-tree"></i> Lush Secluded Garden Deck</li>
+                                <li><i class="fa-solid fa-bell"></i> 24/7 Dedicated Butler Service</li>
+                                <li><i class="fa-solid fa-umbrella-beach"></i> Direct Beachfront Gateway</li>
+                            </ul>
+                        </div>
+
+                        <div class="showcase-booking">
+                            <div class="showcase-pricing">
+                                <span class="price-val">$1,400</span>
+                                <span class="price-unit">/ night</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Cheval Blanc Private Villa', 'Luxury Villa Stay', 1400, 'St. Barths', 'cheval-blanc-st-barths-resort.jpg')">Reserve Suite</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Row 2: Safari River Lodge & Observatory -->
+                <div class="split-showcase-row">
+                    <div class="showcase-img-col">
+                        <img src="luxury-safari-river-lodge.webp" alt="Namibian wild river lodge deck complete with astronomical stargazing telescope and fireside seating" loading="lazy">
+                        <span class="showcase-badge">Adventure Luxury</span>
+                    </div>
+                    <div class="showcase-content-col">
+                        <span class="showcase-loc"><i class="fa-solid fa-location-dot"></i> Namibia, Africa</span>
+                        <h3 class="serif-text">Safari River Lodge & Observatory</h3>
+                        <p class="showcase-desc">Immerse yourself in the raw natural beauty of the Namibian wilderness. Designed with authentic local timbers and organic stone textures, this secluded riverfront lodge features a premium elevated viewing deck equipped with a high-power telescope for spectacular starlight observation under crystal-clear African night skies.</p>
+                        
+                        <div class="showcase-amenities">
+                            <h4>Exclusive Suite Privileges</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-circle-nodes"></i> Astronomical Stargazing Telescope</li>
+                                <li><i class="fa-solid fa-compass"></i> Private Guided Wilderness Safaris</li>
+                                <li><i class="fa-solid fa-fire"></i> Elevated Firepit River Observation Deck</li>
+                                <li><i class="fa-solid fa-martini-glass-citrus"></i> Premium Airport Executive Lounge Access</li>
+                            </ul>
+                        </div>
+
+                        <div class="showcase-booking">
+                            <div class="showcase-pricing">
+                                <span class="price-val">$1,250</span>
+                                <span class="price-unit">/ night</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Safari River Lodge & Observatory', 'Luxury Lodge Stay', 1250, 'Namibia, Africa', 'luxury-safari-river-lodge.webp')">Reserve Suite</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Row 3: The Indian Heritage Palace -->
+                <div class="split-showcase-row">
+                    <div class="showcase-img-col">
+                        <img src="saamabee-indian-palace-hotel-banner.png" alt="Historic red sandstone Indian palace hotel facade illuminated beautifully by warm golden sunset glow" loading="lazy">
+                        <span class="showcase-badge">Imperial Royal</span>
+                    </div>
+                    <div class="showcase-content-col">
+                        <span class="showcase-loc"><i class="fa-solid fa-location-dot"></i> Rajasthan, India</span>
+                        <h3 class="serif-text">The Indian Heritage Palace</h3>
+                        <p class="showcase-desc">Step into a bygone era of historic grandeur. This meticulously restored red sandstone palace fortress combines classic Rajasthani architecture with state-of-the-art five-star conveniences. Enjoy royal sunset dining across majestic stone battlements, complete with traditional musicians and legendary imperial hospitality.</p>
+                        
+                        <div class="showcase-amenities">
+                            <h4>Exclusive Suite Privileges</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-utensils"></i> Imperial Sunset Balcony Dining</li>
+                                <li><i class="fa-solid fa-gem"></i> Grand Royal Archway Suites</li>
+                                <li><i class="fa-solid fa-handshake-angle"></i> Bespoke Traditional Royal Concierge</li>
+                                <li><i class="fa-solid fa-car-side"></i> Elite Private Chauffeur Airport Transits</li>
+                            </ul>
+                        </div>
+
+                        <div class="showcase-booking">
+                            <div class="showcase-pricing">
+                                <span class="price-val">$1,500</span>
+                                <span class="price-unit">/ night</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('The Indian Heritage Palace', 'Historic Palace Suite', 1500, 'Rajasthan, India', 'saamabee-indian-palace-hotel-banner.png')">Reserve Suite</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- "More Curated Premium Stays" Grid -->
+            <div class="accommodations-grid-section">
+                <div class="container">
+                    <div class="section-header" style="margin-top: 60px; margin-bottom: 40px;">
+                        <span>Supplementary Collections</span>
+                        <h2>More Premium Stays</h2>
+                        <p>Explore supplementary high-fidelity retreats spanning turquoise ocean shores and dynamic hillside sanctuaries.</p>
+                    </div>
+
+                    <div class="services-grid">
+                        
+                        <!-- Stay Card 1: Pangkor Laut -->
+                        <article class="glass-card">
+                            <div class="card-image-wrapper">
+                                <img src="pangkor-laut-resort-malaysia.jpg" alt="Overwater luxury villas standing above clear emerald sea water at Pangkor Laut Resort" loading="lazy">
+                                <span class="card-badge">Overwater</span>
+                            </div>
+                            <div class="card-body">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                    <span style="font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px;"><i class="fa-solid fa-location-dot"></i> Malaysia</span>
+                                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fa-solid fa-star" style="color: var(--accent);"></i> 4.8</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Pangkor Laut Overwater Resort</h3>
+                                <p style="font-size: 0.85rem; margin-bottom: 20px;">Premium stilted bungalows stretching gracefully into a tranquil, warm emerald Malaysian sea. Private wooden walkways and spectacular marine life views.</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                                    <div>
+                                        <span style="font-size: 1.25rem; font-weight: 500; color: var(--text);">$890</span>
+                                        <span style="font-size: 0.75rem; color: var(--text-muted);">/ night</span>
+                                    </div>
+                                    <button class="btn btn-secondary" onclick="searchController.openDirectBooking('Pangkor Laut Overwater Resort', 'Overwater Bungalow', 890, 'Pangkor Laut, Malaysia', 'pangkor-laut-resort-malaysia.jpg')" style="padding: 10px 18px; font-size: 0.7rem;">Book Stay</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Stay Card 2: Viceroy Sugar Beach -->
+                        <article class="glass-card">
+                            <div class="card-image-wrapper">
+                                <img src="sugar-beach-viceroy-resort.jpg" alt="Luxury beachfront villa patio terrace with lounge chairs and white sandy beach at Sugar Beach St. Lucia" loading="lazy">
+                                <span class="card-badge">Beachfront</span>
+                            </div>
+                            <div class="card-body">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                    <span style="font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px;"><i class="fa-solid fa-location-dot"></i> St. Lucia</span>
+                                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fa-solid fa-star" style="color: var(--accent);"></i> 4.9</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Viceroy Sugar Beach Resort</h3>
+                                <p style="font-size: 0.85rem; margin-bottom: 20px;">Private luxury terrace and pool nested perfectly between the dramatic Piton volcanic peaks, opening onto sugar-white Caribbean sands.</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                                    <div>
+                                        <span style="font-size: 1.25rem; font-weight: 500; color: var(--text);">$850</span>
+                                        <span style="font-size: 0.75rem; color: var(--text-muted);">/ night</span>
+                                    </div>
+                                    <button class="btn btn-secondary" onclick="searchController.openDirectBooking('Viceroy Sugar Beach Resort', 'Beachfront Suite', 850, 'St. Lucia, Caribbean', 'sugar-beach-viceroy-resort.jpg')" style="padding: 10px 18px; font-size: 0.7rem;">Book Stay</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Stay Card 3: Royal Twilight Villas -->
+                        <article class="glass-card">
+                            <div class="card-image-wrapper">
+                                <img src="luxury-hillside-villas-twilight.jpg" alt="Hillside tropical thatched villas with heated plunge pools glowing at twilight in Bali" loading="lazy">
+                                <span class="card-badge">Exclusive</span>
+                            </div>
+                            <div class="card-body">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                    <span style="font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px;"><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</span>
+                                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fa-solid fa-star" style="color: var(--accent);"></i> 5.0</span>
+                                </div>
+                                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Royal Twilight Villas</h3>
+                                <p style="font-size: 0.85rem; margin-bottom: 20px;">Spectacular multi-level hillside sanctuary in Bali, featuring heated private pools and traditional thatched villas glowing warmly at twilight.</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                                    <div>
+                                        <span style="font-size: 1.25rem; font-weight: 500; color: var(--text);">$1,150</span>
+                                        <span style="font-size: 0.75rem; color: var(--text-muted);">/ night</span>
+                                    </div>
+                                    <button class="btn btn-secondary" onclick="searchController.openDirectBooking('Royal Twilight Villas', 'Hillside Plunge Villa', 1150, 'Bali, Indonesia', 'luxury-hillside-villas-twilight.jpg')" style="padding: 10px 18px; font-size: 0.7rem;">Book Stay</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -472,6 +669,7 @@
                 <h4>Explore Services</h4>
                 <ul>
                     <li><a href="#/home">Landing Desk</a></li>
+                    <li><a href="#/accommodations">Premier Accommodations</a></li>
                     <li><a href="#/destinations">Filter Portfolios</a></li>
                     <li><a href="#/experience">VIP Cabin Experiences</a></li>
                     <li><a href="#/consultation">Concierge Advisor</a></li>

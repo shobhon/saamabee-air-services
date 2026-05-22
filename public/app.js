@@ -277,6 +277,7 @@ class Router {
         this.routes = {
             'home': 'view-home',
             'search': 'view-search',
+            'accommodations': 'view-accommodations',
             'destinations': 'view-destinations',
             'experience': 'view-experience',
             'consultation': 'view-consultation'
@@ -676,6 +677,88 @@ class SearchEngine {
                 </div>
             `;
         }).join('');
+    }
+
+    openDirectBooking(title, category, price, location, image) {
+        // Create a temporary mock item to bypass search results
+        const mockItem = {
+            id: `ACC-${Math.floor(1000 + Math.random() * 9000)}`,
+            title: title,
+            type: category || 'Luxury Hotel Stay',
+            image: image,
+            price: price,
+            rating: 5.0,
+            location: location,
+            description: '',
+            details: [
+                { label: 'Room Privileges', value: 'Bespoke Package Rate' },
+                { label: 'Check In', value: 'Scheduled on consultation' },
+                { label: 'Exclusive Perks', value: 'Infinity Pool, Private Lounge, Free Wi-Fi' }
+            ]
+        };
+
+        // Pre-populate searchParams in case they are empty
+        if (!this.searchParams.date) {
+            this.searchParams.date = 'Selected upon consultation';
+        }
+        if (!this.searchParams.travelClass) {
+            this.searchParams.travelClass = 'Prestige Suite';
+        }
+
+        appState.currentPendingBooking = mockItem;
+
+        const drawer = document.getElementById('booking-drawer');
+        const detailsContainer = document.getElementById('booking-summary-details');
+
+        if (!drawer || !detailsContainer) return;
+
+        const subtotal = price;
+        const luxuryTax = Math.round(subtotal * 0.12);
+        const total = subtotal + luxuryTax;
+
+        detailsContainer.innerHTML = `
+            <div class="booking-summary-card">
+                <h4>Reservation Selected</h4>
+                <div class="booking-summary-row" style="margin-top: 15px;">
+                    <span>Item</span>
+                    <span>${title}</span>
+                </div>
+                <div class="booking-summary-row">
+                    <span>Category</span>
+                    <span>${mockItem.type}</span>
+                </div>
+                <div class="booking-summary-row">
+                    <span>Target Route/Stay</span>
+                    <span>${location}</span>
+                </div>
+                <div class="booking-summary-row">
+                    <span>VIP Privilege Class</span>
+                    <span>${this.searchParams.travelClass || 'First Class'}</span>
+                </div>
+                <div class="booking-summary-row">
+                    <span>Scheduled Date</span>
+                    <span>${this.searchParams.date || 'Selected upon consultation'}</span>
+                </div>
+            </div>
+            
+            <div class="booking-summary-card">
+                <h4>Pricing Details</h4>
+                <div class="booking-summary-row" style="margin-top: 15px;">
+                    <span>Privilege Fare</span>
+                    <span>$${subtotal.toLocaleString()}</span>
+                </div>
+                <div class="booking-summary-row">
+                    <span>Premium Lounge & Cabin Tax (12%)</span>
+                    <span>$${luxuryTax.toLocaleString()}</span>
+                </div>
+                <div class="booking-summary-total">
+                    <span>Total Cost</span>
+                    <span>$${total.toLocaleString()}</span>
+                </div>
+            </div>
+        `;
+
+        drawer.classList.add('active');
     }
 
     openBookingDrawer(id) {
