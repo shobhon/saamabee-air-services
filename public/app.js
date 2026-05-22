@@ -352,6 +352,7 @@ class Router {
     constructor() {
         this.routes = {
             'home': 'view-home',
+            'flights': 'view-flights',
             'search': 'view-search',
             'accommodations': 'view-accommodations',
             'destinations': 'view-destinations',

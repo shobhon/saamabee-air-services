@@ -39,6 +39,7 @@
             
             <nav id="main-nav" role="navigation" aria-label="Primary Navigation">
                 <a href="#/home" class="active" id="nav-link-home">Home</a>
+                <a href="#/flights" id="nav-link-flights">Flights</a>
                 <a href="#/destinations" id="nav-link-destinations">Destinations</a>
                 <a href="#/accommodations" id="nav-link-accommodations">Accommodations</a>
                 <a href="#/experience" id="nav-link-experience">Experience</a>
@@ -428,6 +429,245 @@
                             </div>
                         </article>
 
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           VIEW: FLIGHTS (Premium Aviation & Fleet Showcase)
+           ========================================================================== -->
+        <section id="view-flights" class="view-section">
+            <!-- 1. Hero Landing Header -->
+            <div class="flights-hero-section">
+                <div class="flights-hero-bg"></div>
+                <div class="flights-hero-content">
+                    <span class="flights-hero-badge">Bespoke Global Charter</span>
+                    <h1>The Saamabee Fleet — Elevated Sky Travel</h1>
+                    <p>Indulge in absolute comfort and engineering brilliance. Our hand-selected modern aircraft are engineered to turn intercontinental journeys into seamless extensions of your luxury lifestyle.</p>
+                </div>
+            </div>
+
+            <!-- 2. Alternating Fleet Showcase -->
+            <div class="split-showcase-container container">
+                <!-- Airbus A350 Signature -->
+                <article class="split-showcase-row">
+                    <div class="showcase-img-col">
+                        <span class="showcase-badge">Flagship Class</span>
+                        <img src="airbus-a350-nose-sunset.jpg" alt="Airbus A350 Signature Flightdeck Nose" loading="lazy">
+                    </div>
+                    <div class="showcase-content-col">
+                        <div class="showcase-loc"><i class="fa-solid fa-plane-up"></i> Airbus A350-1000 Signature</div>
+                        <h3>Whisper-Quiet Flagship</h3>
+                        <p class="showcase-desc">Experience global transit in our whisper-quiet Airbus A350-1000 flagship. Featuring a custom carbon-composite airframe, exceptionally wide private layout, and low cabin altitude pressurization designed to preserve natural physical vitality across time zones.</p>
+                        
+                        <div class="showcase-amenities">
+                            <h4>Flight Specifications & Perks</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-network-wired"></i> 12,000 km Non-stop Range</li>
+                                <li><i class="fa-solid fa-gauge-high"></i> Mach 0.89 Cruising Speed</li>
+                                <li><i class="fa-solid fa-couch"></i> 12 Private First-Class Suites</li>
+                                <li><i class="fa-solid fa-utensils"></i> Bespoke Private Dining Menu</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="showcase-booking">
+                            <div class="showcase-pricing">
+                                <span class="price-val">$1,850</span>
+                                <span class="price-unit">/ flight hr</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Airbus A350 Signature Charter', 'Ultra-Long Range Jet', 1850, 'Global Private Charter', 'airbus-a350-nose-sunset.jpg')">Book Airbus A350</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Boeing 787 Dreamliner -->
+                <article class="split-showcase-row">
+                    <div class="showcase-img-col">
+                        <span class="showcase-badge">Nocturnal Class</span>
+                        <img src="red-dreamliner-airplane-night.jpg" alt="Boeing 787 Dreamliner Spotlit" loading="lazy">
+                    </div>
+                    <div class="showcase-content-col">
+                        <div class="showcase-loc"><i class="fa-solid fa-plane-up"></i> Boeing 787 Nocturnal Dreamliner</div>
+                        <h3>Circadian Sanctuary</h3>
+                        <p class="showcase-desc">Fly the Boeing 787 Dreamliner, engineered with advanced smart climate controls that naturally regulate cabin humidity and pressure. Outfitted with auto-dimming electrochromic panoramic glass and intelligent circadian spectrum lighting that completely mitigates jet lag.</p>
+                        
+                        <div class="showcase-amenities">
+                            <h4>Flight Specifications & Perks</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-network-wired"></i> 14,000 km Direct Range</li>
+                                <li><i class="fa-solid fa-gauge-high"></i> Mach 0.85 Cruising Speed</li>
+                                <li><i class="fa-solid fa-couch"></i> 8 VVIP Fully Enclosed Pods</li>
+                                <li><i class="fa-solid fa-cloud"></i> Circum-Polar Climate System</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="showcase-booking">
+                            <div class="showcase-pricing">
+                                <span class="price-val">$1,550</span>
+                                <span class="price-unit">/ flight hr</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Boeing 787 Nocturnal Dreamliner Charter', 'Bespoke Executive Dreamliner', 1550, 'Global Private Charter', 'red-dreamliner-airplane-night.jpg')">Book Dreamliner</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Boeing Intercontinental Jet -->
+                <article class="split-showcase-row">
+                    <div class="showcase-img-col">
+                        <span class="showcase-badge">Intercontinental Class</span>
+                        <img src="boeing-airplane-nose-sky-front.jpg" alt="Boeing Intercontinental Jet Climbing" loading="lazy">
+                    </div>
+                    <div class="showcase-content-col">
+                        <div class="showcase-loc"><i class="fa-solid fa-plane-up"></i> Boeing Intercontinental Jet</div>
+                        <h3>Supreme Delegation Cruiser</h3>
+                        <p class="showcase-desc">Our premier double-deck intercontinental cruiser, designed specifically for high-capacity ultra-luxurious corporate and diplomatic delegations. Complete with a private dining salon, dedicated conference chambers, and separate presidential sleeping suites.</p>
+                        
+                        <div class="showcase-amenities">
+                            <h4>Flight Specifications & Perks</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-network-wired"></i> 15,000 km Maximum Range</li>
+                                <li><i class="fa-solid fa-gauge-high"></i> Mach 0.92 Cruising Speed</li>
+                                <li><i class="fa-solid fa-couch"></i> 16 Prestige Staterooms</li>
+                                <li><i class="fa-solid fa-handshake"></i> Boardroom & Dining Salon</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="showcase-booking">
+                            <div class="showcase-pricing">
+                                <span class="price-val">$2,100</span>
+                                <span class="price-unit">/ flight hr</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Boeing Intercontinental Jet Charter', 'VVIP Delegation Flagship', 2100, 'Global Private Charter', 'boeing-airplane-nose-sky-front.jpg')">Book Intercontinental</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 3. Aviation Engineering & Experience Grid -->
+            <div class="flights-experience-section">
+                <div class="container">
+                    <div class="section-header" style="text-align: center;">
+                        <span>Elite Infrastructure</span>
+                        <h2>Aviation Engineering & Experience</h2>
+                        <p>Our fleet features world-class technology to deliver a secure, peaceful, and absolutely comfortable flight experience.</p>
+                    </div>
+                    
+                    <div class="flights-experience-grid">
+                        <div class="flights-experience-card">
+                            <div class="flights-experience-card-icon"><i class="fa-solid fa-wind"></i></div>
+                            <h3>HEPA Climate</h3>
+                            <p>Triple-filter HEPA ventilation completes full fresh air circulation cycles every two minutes, matching the cleanest environments on Earth.</p>
+                        </div>
+                        
+                        <div class="flights-experience-card">
+                            <div class="flights-experience-card-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <h3>Trent Propulsion</h3>
+                            <p>Rolls-Royce Trent turbofan assemblies deliver silent thrust, reducing cabin vibration levels to absolute whisper-quiet margins.</p>
+                        </div>
+                        
+                        <div class="flights-experience-card">
+                            <div class="flights-experience-card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <h3>Circadian Systems</h3>
+                            <p>Bespoke spectral cabin lighting simulates the natural rise and setting of the sun, aligning biological clocks effortlessly.</p>
+                        </div>
+                        
+                        <div class="flights-experience-card">
+                            <div class="flights-experience-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3>Active Navigation</h3>
+                            <p>Next-generation navigation telemetry overlays and flight safety architectures ensure absolute stability through weather and turbulences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Interactive Close-Ups Gallery -->
+            <div class="flights-gallery-section">
+                <div class="container">
+                    <div class="section-header" style="text-align: center;">
+                        <span>Curated Close-Ups</span>
+                        <h2>Interactive Aviation Gallery</h2>
+                        <p>Explore high-fidelity engineering close-ups. Click on any aircraft element to view details in our accessible zoom lightbox.</p>
+                    </div>
+                    
+                    <div class="flights-gallery-grid">
+                        <!-- Turbofan 1 -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-turbofan-engine-runway.jpg')">
+                            <img src="airplane-turbofan-engine-runway.jpg" alt="Intake Cowling Diagnostics" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Turbofan Intake</h3>
+                                <p>Close-up of the ultra-efficient Rolls-Royce jet powerplant intake casing.</p>
+                            </div>
+                        </div>
+
+                        <!-- Turbofan 2 -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('boeing-777-engine-close-up-sunset.jpg')">
+                            <img src="boeing-777-engine-close-up-sunset.jpg" alt="Boeing 777 Powerplant reflection" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Sunset Engine Glow</h3>
+                                <p>Golden sunset hues reflecting on the heavy titanium turbofan blades.</p>
+                            </div>
+                        </div>
+
+                        <!-- Vintage Flagship -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('vintage-polished-metal-airplane.jpg')">
+                            <img src="vintage-polished-metal-airplane.jpg" alt="Heritage radial flagship classic" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Heritage Classic</h3>
+                                <p>Polished aluminum fuselage detailing of our radial classic flagship.</p>
+                            </div>
+                        </div>
+
+                        <!-- Cockpit -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-cockpit-nose-with-flying-plane.jpg')">
+                            <img src="airplane-cockpit-nose-with-flying-plane.jpg" alt="Avionics instrumentation flightdeck" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Flightdeck Avionics</h3>
+                                <p>Advanced instruments panel view capturing atmospheric twilight transit.</p>
+                            </div>
+                        </div>
+
+                        <!-- Wing Sunset -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-wing-sunset-clouds.jpg')">
+                            <img src="airplane-wing-sunset-clouds.jpg" alt="Ethereal Wing sunset sky" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Sunset Wing Profile</h3>
+                                <p>Ethereal wing profile slicing smoothly through golden hour clouds.</p>
+                            </div>
+                        </div>
+
+                        <!-- Wing Blue Sky -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-wing-clouds-blue-sky.png')">
+                            <img src="airplane-wing-clouds-blue-sky.png" alt="Wing perspective over blue skies" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Sky Oceans</h3>
+                                <p>Crystalline wing profile soaring majestically over deep blue horizons.</p>
+                            </div>
+                        </div>
+
+                        <!-- Window view -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('saamabee-explore-the-world-cabin-window.png')">
+                            <img src="saamabee-explore-the-world-cabin-window.png" alt="Cabin Window Suite seat view" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Cabin Port View</h3>
+                                <p>Serene cloudscape vistas seen from the comfort of our first class seats.</p>
+                            </div>
+                        </div>
+
+                        <!-- Spotlit aircraft -->
+                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('dramatic-airplane-night-spotlight.jpeg')">
+                            <img src="dramatic-airplane-night-spotlight.jpeg" alt="Private corporate jet spotlit" loading="lazy">
+                            <div class="flights-gallery-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <h3>Nocturnal Staging</h3>
+                                <p>Spotlight illuminated business jet aircraft ready for boarding.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
