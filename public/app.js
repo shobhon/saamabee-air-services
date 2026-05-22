@@ -1,7 +1,7 @@
 /**
  * Saamabee Air Services - Client-Side SPA Application Engine
  * Contains Hash Router, View Transition Handler, Interactive Search Engine,
- * Gallery filter, Lightbox system, and Travel Advisor Wizard.
+ * Gallery filter, Lightbox system, and Luxury Travel Advisor Recommender.
  */
 
 // ==========================================================================
@@ -353,7 +353,6 @@ class Router {
         this.routes = {
             'home': 'view-home',
             'flights': 'view-flights',
-            'search': 'view-search',
             'accommodations': 'view-accommodations',
             'destinations': 'view-destinations',
             'experience': 'view-experience',
@@ -424,7 +423,7 @@ const appRouter = new Router();
 
 // ==========================================================================
 // 3. Application State & Booking Manager
-// Tracks simulated search filters, reservation lists, and local storage.
+// Tracks user search filters, active reservation lists, and local storage.
 // ==========================================================================
 class BookingState {
     constructor() {
@@ -510,250 +509,7 @@ const appState = new BookingState();
 // ==========================================================================
 class SearchEngine {
     constructor() {
-        this.searchResults = [];
-        this.currentMode = 'flights'; // 'flights' or 'hotels'
         this.searchParams = {};
-
-        this.initFormListeners();
-    }
-
-    initFormListeners() {
-        // Grab forms
-        const searchForm = document.getElementById('main-search-form');
-        if (searchForm) {
-            searchForm.addEventListener('submit', (e) => this.handleSearchSubmit(e));
-        }
-
-        // Search tab buttons
-        document.querySelectorAll('.search-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                const type = tab.getAttribute('data-type');
-                this.currentMode = type;
-                this.updateFormInputsForMode(type);
-            });
-        });
-    }
-
-    updateFormInputsForMode(type) {
-        const fromInput = document.getElementById('search-from');
-        const toInput = document.getElementById('search-to');
-        const classSelect = document.getElementById('search-class');
-        const searchBtn = document.getElementById('search-submit-btn');
-
-        if (type === 'hotels') {
-            fromInput.setAttribute('disabled', 'true');
-            fromInput.placeholder = 'N/A (Hotel Stay)';
-            toInput.placeholder = 'Destination / Resort Area';
-            classSelect.innerHTML = `
-                <option>1 Room: 2 Adults</option>
-                <option>2 Rooms: 4 Adults</option>
-                <option>Private Villa Experience</option>
-                <option>Presidential Suite Privilege</option>
-            `;
-            searchBtn.textContent = 'FIND HOTELS';
-        } else {
-            fromInput.removeAttribute('disabled');
-            fromInput.placeholder = 'Departure City (e.g. DAC)';
-            toInput.placeholder = 'Destination City (e.g. LHR)';
-            classSelect.innerHTML = `
-                <option>Economy Class</option>
-                <option>Premium Economy</option>
-                <option>Business Class Privilege</option>
-                <option>First Class Signature</option>
-            `;
-            searchBtn.textContent = 'FIND FLIGHTS';
-        }
-    }
-
-    handleSearchSubmit(e) {
-        e.preventDefault();
-
-        // Extract parameters
-        const fromVal = document.getElementById('search-from').value || 'Dhaka (DAC)';
-        const toVal = document.getElementById('search-to').value || 'London (LHR)';
-        const dateVal = document.getElementById('search-date').value || '2026-07-24';
-        const classVal = document.getElementById('search-class').value || 'First Class Signature';
-
-        this.searchParams = {
-            from: fromVal,
-            to: toVal,
-            date: dateVal,
-            travelClass: classVal
-        };
-
-        // Redirect to search view
-        window.location.hash = '#/search';
-
-        // Run search process
-        this.runSearch();
-    }
-
-    runSearch() {
-        const resultsTitle = document.getElementById('results-view-title');
-        const resultsSubtitle = document.getElementById('results-view-subtitle');
-        const resultsContainer = document.getElementById('search-results-list');
-        const skeletonLoader = document.getElementById('skeleton-loader');
-
-        if (!resultsContainer) return;
-
-        // Set search header titles
-        if (this.currentMode === 'hotels') {
-            resultsTitle.textContent = `Luxury Resorts & Hotels`;
-            resultsSubtitle.textContent = `Bespoke stays in ${this.searchParams.to} scheduled for ${this.searchParams.date}`;
-        } else {
-            resultsTitle.textContent = `Premium Flight Cabin Choices`;
-            resultsSubtitle.textContent = `Connecting ${this.searchParams.from} to ${this.searchParams.to} on ${this.searchParams.date}`;
-        }
-
-        // Show skeleton loader and hide active list
-        resultsContainer.style.display = 'none';
-        skeletonLoader.style.display = 'flex';
-
-        // Simulate 1.2s luxury database fetching time
-        setTimeout(() => {
-            skeletonLoader.style.display = 'none';
-            resultsContainer.style.display = 'flex';
-
-            this.generateMockResults();
-            this.renderResults();
-        }, 1200);
-    }
-
-    generateMockResults() {
-        if (this.currentMode === 'hotels') {
-            // Filter image database for resorts
-            const resortAssets = IMAGE_DATABASE.filter(item => item.category === 'resorts');
-            this.searchResults = resortAssets.map((asset, idx) => {
-                return {
-                    id: `HOT-${idx + 3290}`,
-                    title: asset.title,
-                    type: 'Luxury Hotel Stay',
-                    image: asset.filename,
-                    price: asset.price,
-                    rating: asset.rating,
-                    location: asset.location || this.searchParams.to,
-                    description: asset.description,
-                    details: [
-                        { label: 'Room Privileges', value: this.searchParams.travelClass },
-                        { label: 'Check In', value: this.searchParams.date },
-                        { label: 'Exclusive Perks', value: 'Infinity Pool, Private Lounge, Free Wi-Fi' }
-                    ]
-                };
-            });
-        } else {
-            // Filter image database for flights
-            const flightAssets = IMAGE_DATABASE.filter(item => item.category === 'flights');
-            this.searchResults = flightAssets.map((asset, idx) => {
-                const times = [
-                    { start: '08:45', end: '21:25' },
-                    { start: '14:20', end: '03:10' },
-                    { start: '22:15', end: '10:05' }
-                ][idx % 3];
-
-                return {
-                    id: `FLI-${idx + 8540}`,
-                    title: asset.title,
-                    type: asset.airline || 'Saamabee Intercontinental',
-                    image: asset.filename,
-                    price: asset.price,
-                    rating: asset.rating,
-                    location: `${this.searchParams.from} to ${this.searchParams.to}`,
-                    description: asset.description,
-                    duration: asset.duration || '9h 30m',
-                    stops: asset.stops || 'Non-stop',
-                    times: times,
-                    details: [
-                        { label: 'Aircraft Type', value: asset.title },
-                        { label: 'Cabin Option', value: this.searchParams.travelClass },
-                        { label: 'Seat Spec', value: 'Flat-bed Recliner, Multi-course Dining' }
-                    ]
-                };
-            });
-        }
-    }
-
-    renderResults() {
-        const container = document.getElementById('search-results-list');
-        const countText = document.getElementById('results-found-count');
-        if (!container) return;
-
-        if (this.searchResults.length === 0) {
-            container.innerHTML = `
-                <div class="no-reservations">
-                    <p>No premium listings matched your search variables. Try adjusting your destination.</p>
-                </div>
-            `;
-            countText.textContent = `0 Listings Available`;
-            return;
-        }
-
-        countText.textContent = `${this.searchResults.length} Luxury Listings Available`;
-
-        container.innerHTML = this.searchResults.map(item => {
-            const detailHtml = item.details.map(d => `
-                <div class="detail-item">
-                    <span class="detail-label">${d.label}</span>
-                    <span class="detail-value">${d.value}</span>
-                </div>
-            `).join('');
-
-            // If flight, render timeline layout
-            let timelineHtml = '';
-            if (this.currentMode === 'flights') {
-                timelineHtml = `
-                    <div class="flight-timeline">
-                        <div class="timeline-point">
-                            <div class="timeline-time">${item.times.start}</div>
-                            <div class="timeline-airport">${this.searchParams.from.split('(')[1]?.replace(')', '') || 'DAC'}</div>
-                        </div>
-                        <div class="timeline-path">
-                            <span class="timeline-duration">${item.duration} (${item.stops})</span>
-                        </div>
-                        <div class="timeline-point">
-                            <div class="timeline-time">${item.times.end}</div>
-                            <div class="timeline-airport">${this.searchParams.to.split('(')[1]?.replace(')', '') || 'LHR'}</div>
-                        </div>
-                    </div>
-                `;
-            }
-
-            return `
-                <div class="result-card">
-                    <div class="result-card-img">
-                        <img src="${item.image}" alt="${item.title}">
-                    </div>
-                    <div class="result-card-body">
-                        <div class="result-card-main">
-                            <div class="result-card-title">
-                                <h3>${item.title}</h3>
-                                <span class="result-card-subtitle">${item.type}</span>
-                            </div>
-                            <div class="result-card-pricing">
-                                <div class="price-tag">$${item.price}</div>
-                                <span class="price-sub">${this.currentMode === 'hotels' ? 'per night' : 'one-way'}</span>
-                            </div>
-                        </div>
-                        
-                        ${timelineHtml}
-                        
-                        <div class="result-card-details">
-                            ${detailHtml}
-                        </div>
-                        
-                        <div class="result-card-footer">
-                            <div class="card-rating">
-                                <i class="fas fa-star" style="color: var(--accent)"></i>
-                                <strong>${item.rating}</strong> / 5.0 VIP Rating
-                            </div>
-                            <button class="btn btn-primary" onclick="searchController.openBookingDrawer('${item.id}')" style="padding: 10px 24px; font-size: 0.75rem;">Secure Booking</button>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }).join('');
     }
 
     openDirectBooking(title, category, price, location, image) {
@@ -838,67 +594,6 @@ class SearchEngine {
         drawer.classList.add('active');
     }
 
-    openBookingDrawer(id) {
-        const item = this.searchResults.find(i => i.id === id);
-        if (!item) return;
-
-        appState.currentPendingBooking = item;
-
-        const drawer = document.getElementById('booking-drawer');
-        const detailsContainer = document.getElementById('booking-summary-details');
-
-        if (!drawer || !detailsContainer) return;
-
-        // Render booking receipt/summary in drawer
-        const subtotal = item.price;
-        const luxuryTax = Math.round(subtotal * 0.12);
-        const total = subtotal + luxuryTax;
-
-        detailsContainer.innerHTML = `
-            <div class="booking-summary-card">
-                <h4>Reservation Selected</h4>
-                <div class="booking-summary-row" style="margin-top: 15px;">
-                    <span>Item</span>
-                    <span>${item.title}</span>
-                </div>
-                <div class="booking-summary-row">
-                    <span>Category</span>
-                    <span>${item.type}</span>
-                </div>
-                <div class="booking-summary-row">
-                    <span>Target Route/Stay</span>
-                    <span>${item.location}</span>
-                </div>
-                <div class="booking-summary-row">
-                    <span>VIP Privilege Class</span>
-                    <span>${this.searchParams.travelClass || 'First Class'}</span>
-                </div>
-                <div class="booking-summary-row">
-                    <span>Scheduled Date</span>
-                    <span>${this.searchParams.date || '2026-07-24'}</span>
-                </div>
-            </div>
-            
-            <div class="booking-summary-card">
-                <h4>Pricing Details</h4>
-                <div class="booking-summary-row" style="margin-top: 15px;">
-                    <span>Privilege Fare</span>
-                    <span>$${subtotal.toLocaleString()}</span>
-                </div>
-                <div class="booking-summary-row">
-                    <span>Premium Lounge & Cabin Tax (12%)</span>
-                    <span>$${luxuryTax.toLocaleString()}</span>
-                </div>
-                <div class="booking-summary-total">
-                    <span>Total Cost</span>
-                    <span>$${total.toLocaleString()}</span>
-                </div>
-            </div>
-        `;
-
-        drawer.classList.add('active');
-    }
-
     closeBookingDrawer() {
         const drawer = document.getElementById('booking-drawer');
         if (drawer) {
@@ -940,33 +635,10 @@ class SearchEngine {
         nameInput.value = '';
         emailInput.value = '';
 
-        // Navigate to experience view where reservations live
-        window.location.hash = '#/experience';
+        // Navigate to consultation view where reservations live
+        window.location.hash = '#/consultation';
         
         alert(`Congratulations! Your luxury reservation for "${item.title}" has been successfully guaranteed. Itinerary details are saved to your account profile.`);
-    }
-
-    applyFilters() {
-        // Advanced sort/filter simulation
-        const ratingFilter = document.getElementById('filter-rating-5').checked;
-        const sortSelect = document.getElementById('results-sort-by').value;
-
-        let filtered = [...this.searchResults];
-
-        if (ratingFilter) {
-            filtered = filtered.filter(item => item.rating >= 4.9);
-        }
-
-        if (sortSelect === 'price-low') {
-            filtered.sort((a, b) => a.price - b.price);
-        } else if (sortSelect === 'price-high') {
-            filtered.sort((a, b) => b.price - a.price);
-        } else {
-            filtered.sort((a, b) => b.rating - a.rating);
-        }
-
-        this.searchResults = filtered;
-        this.renderResults();
     }
 }
 
@@ -1072,7 +744,7 @@ class GalleryController {
         img.src = item.filename;
         img.alt = item.title;
         captionTitle.textContent = item.title;
-        captionDesc.textContent = item.description || `High-fidelity project asset showcasing our premium air and accommodations portfolio.`;
+        captionDesc.textContent = item.description || `An exclusive offering showcasing our premium air travel and luxury accommodations portfolio.`;
 
         lightbox.classList.add('active');
     }
@@ -1093,7 +765,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ==========================================================================
 // 6. Luxury Travel Advisor Recommendation System
-// Custom dynamic wizard analyzing preferences and matching appropriate assets.
+// Dynamic concierge recommender matching preferences to curated retreats.
 // ==========================================================================
 class TravelAdvisor {
     constructor() {
@@ -1228,6 +900,20 @@ class TravelAdvisor {
         const pricePerPerson = matchedResort.price + matchedFlight.price;
         document.getElementById('rec-cost-val').textContent = `$${pricePerPerson.toLocaleString()}`;
 
+        // Bind reserve package button to open booking drawer directly
+        const bookBtn = document.getElementById('advisor-book-btn');
+        if (bookBtn) {
+            bookBtn.onclick = () => {
+                searchController.openDirectBooking(
+                    itineraryTitle,
+                    'Custom Package Escape',
+                    pricePerPerson,
+                    matchedResort.location,
+                    matchedResort.filename
+                );
+            };
+        }
+
         // Swap view panels
         wizardContainer.style.display = 'none';
         recContainer.classList.add('active');
@@ -1287,6 +973,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Render active reservations list in experience tab on startup
+    // Render active reservations list in consultation tab on startup
     appState.renderReservationsList();
 });

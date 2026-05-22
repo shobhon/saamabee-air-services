@@ -44,7 +44,6 @@
                 <a href="#/accommodations" id="nav-link-accommodations">Accommodations</a>
                 <a href="#/experience" id="nav-link-experience">Experience</a>
                 <a href="#/consultation" id="nav-link-consultation">Consultation</a>
-                <a href="#/search" id="nav-link-search" style="border: 1px solid var(--accent); padding: 6px 14px; border-radius: var(--border-radius); color: var(--accent);">Search Desk</a>
             </nav>
         </div>
     </header>
@@ -66,44 +65,12 @@
                     <h1>We Provide Luxury Flights and Premium Lodgings Worldwide.</h1>
                     <p>Experience seamless global transits tailored perfectly to your schedule, connecting you with curated properties and elite fleets.</p>
                     <div class="hero-actions">
-                        <a href="#/consultation" class="btn btn-primary" style="margin-right: 15px;">Tailor an Itinerary</a>
-                        <a href="#booking-section" class="btn btn-secondary">Search Schedules</a>
+                        <a href="#/consultation" class="btn btn-primary">Tailor an Itinerary</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Interactive Search Console widget -->
-            <div id="booking-section" class="container search-widget">
-                <div class="search-tabs" role="tablist">
-                    <button class="search-tab active" data-type="flights" role="tab" aria-selected="true" aria-controls="main-search-form">FLIGHT CONSOLE</button>
-                    <button class="search-tab" data-type="hotels" role="tab" aria-selected="false" aria-controls="main-search-form">HOTEL FINDER</button>
-                </div>
-                
-                <form id="main-search-form" class="search-grid">
-                    <div class="form-group">
-                        <label for="search-from">Departure</label>
-                        <input type="text" id="search-from" placeholder="Departure City (e.g. DAC)" required value="Dhaka (DAC)">
-                    </div>
-                    <div class="form-group">
-                        <label for="search-to">Destination</label>
-                        <input type="text" id="search-to" placeholder="Destination City (e.g. LHR)" required value="London (LHR)">
-                    </div>
-                    <div class="form-group">
-                        <label for="search-date">Depart Date</label>
-                        <input type="date" id="search-date" required value="2026-07-24">
-                    </div>
-                    <div class="form-group">
-                        <label for="search-class">Service Class</label>
-                        <select id="search-class">
-                            <option>Economy Class</option>
-                            <option>Premium Economy</option>
-                            <option>Business Class Privilege</option>
-                            <option>First Class Signature</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="search-submit-btn">FIND FLIGHTS</button>
-                </form>
-            </div>
+
 
             <!-- Curated Portfolio Preview highlights -->
             <div class="container" style="margin-top: 100px;">
@@ -147,8 +114,8 @@
                             <span class="card-badge">Stays</span>
                         </div>
                         <div class="card-body">
-                            <h3>Bespoke Stays paired beautifully</h3>
-                            <p>Bespoke stays paired with your flights. Elegant tropical beachfront villas and ancient mountain sanctuaries waiting to receive you.</p>
+                            <h3>Bespoke Stays & Residences</h3>
+                            <p>Seamlessly transition from the runway to our hand-selected portfolio of private beachfront villas and secluded mountain sanctuaries.</p>
                             <a href="#/consultation" class="card-link">Design Stays <span>&rarr;</span></a>
                         </div>
                     </article>
@@ -168,75 +135,7 @@
             </section>
         </section>
 
-        <!-- ==========================================================================
-           VIEW: SEARCH RESULTS
-           ========================================================================== -->
-        <section id="view-search" class="view-section">
-            <div class="container" style="margin-top: 40px;">
-                <div class="section-header" style="margin-top: 30px; margin-bottom: 30px; text-align: left; max-width: 100%;">
-                    <span id="results-view-subtitle">Connecting Flights & Accommodations</span>
-                    <h2 id="results-view-title" style="font-size: 2.8rem; margin-bottom: 10px;">Select Your Premium Choice</h2>
-                </div>
-            </div>
 
-            <!-- Dynamic Search results area -->
-            <div class="search-results-section">
-                <!-- Sidebar filter panel -->
-                <aside class="filters-panel" aria-label="Results Filtering Panel">
-                    <h3>Filter Results</h3>
-                    
-                    <div class="filter-group">
-                        <h4>VIP Ratings</h4>
-                        <label class="filter-option">
-                            <input type="checkbox" id="filter-rating-5" onchange="searchController.applyFilters()">
-                            <span>5.0 Star Premium Stays</span>
-                        </label>
-                    </div>
-
-                    <div class="filter-group">
-                        <h4>Fare Category</h4>
-                        <label class="filter-option">
-                            <input type="checkbox" checked disabled>
-                            <span>Priority Lounge Included</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" checked disabled>
-                            <span>Flexible Date Reschedule</span>
-                        </label>
-                    </div>
-                    
-                    <div style="margin-top: 40px;">
-                        <a href="#/home" class="btn btn-secondary" style="width: 100%; text-align: center; font-size: 0.75rem; padding: 12px 0;">New Search query</a>
-                    </div>
-                </aside>
-
-                <!-- Search listings content -->
-                <div class="results-main">
-                    <div class="results-header">
-                        <span class="results-count" id="results-found-count">Loading premium listings...</span>
-                        
-                        <div class="results-sort">
-                            <label for="results-sort-by" style="font-size: 0.8rem; color: var(--text-muted); margin-right: 10px;">Sort by</label>
-                            <select id="results-sort-by" onchange="searchController.applyFilters()">
-                                <option value="rating-high">Highest VIP Rating</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Skeleton Loader element -->
-                    <div class="skeleton-results" id="skeleton-loader">
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                    </div>
-
-                    <!-- Target location where appJS renders listings -->
-                    <div class="results-container" id="search-results-list"></div>
-                </div>
-            </div>
-        </section>
 
         <!-- ==========================================================================
            VIEW: ACCOMMODATIONS
@@ -353,9 +252,9 @@
             <div class="accommodations-grid-section">
                 <div class="container">
                     <div class="section-header" style="margin-top: 60px; margin-bottom: 40px;">
-                        <span>Supplementary Collections</span>
-                        <h2>More Premium Stays</h2>
-                        <p>Explore supplementary high-fidelity retreats spanning turquoise ocean shores and dynamic hillside sanctuaries.</p>
+                        <span>The Curated Collection</span>
+                        <h2>Global Residences</h2>
+                        <p>Explore exclusive, hand-selected retreats spanning turquoise ocean shores and spectacular hillside sanctuaries.</p>
                     </div>
 
                     <div class="services-grid">
@@ -554,20 +453,20 @@
                     <div class="flights-experience-grid">
                         <div class="flights-experience-card">
                             <div class="flights-experience-card-icon"><i class="fa-solid fa-wind"></i></div>
-                            <h3>HEPA Climate</h3>
-                            <p>Triple-filter HEPA ventilation completes full fresh air circulation cycles every two minutes, matching the cleanest environments on Earth.</p>
+                            <h3>Airflow Architecture</h3>
+                            <p>Advanced environmental control systems that fully recycle and purify cabin air every two minutes, ensuring natural hydration levels are maintained.</p>
                         </div>
                         
                         <div class="flights-experience-card">
-                            <div class="flights-experience-card-icon"><i class="fa-solid fa-bolt"></i></div>
-                            <h3>Trent Propulsion</h3>
-                            <p>Rolls-Royce Trent turbofan assemblies deliver silent thrust, reducing cabin vibration levels to absolute whisper-quiet margins.</p>
+                            <div class="flights-experience-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                            <h3>Global Dispatch</h3>
+                            <p>Our dedicated 24/7 flight operations center proactively monitors global weather patterns, ensuring flight paths are optimized for absolute stability.</p>
                         </div>
                         
                         <div class="flights-experience-card">
-                            <div class="flights-experience-card-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                            <h3>Circadian Systems</h3>
-                            <p>Bespoke spectral cabin lighting simulates the natural rise and setting of the sun, aligning biological clocks effortlessly.</p>
+                            <div class="flights-experience-card-icon"><i class="fa-solid fa-gears"></i></div>
+                            <h3>Precision Engineering</h3>
+                            <p>Advanced active vibration damping and architectural acoustic isolation reduce interior noise levels to absolute whisper-quiet margins.</p>
                         </div>
                         
                         <div class="flights-experience-card">
@@ -585,7 +484,7 @@
                     <div class="section-header" style="text-align: center;">
                         <span>Curated Close-Ups</span>
                         <h2>Interactive Aviation Gallery</h2>
-                        <p>Explore high-fidelity engineering close-ups. Click on any aircraft element to view details in our accessible zoom lightbox.</p>
+                        <p>Explore detailed perspective views of our premium fleet. Select any aircraft to view high-resolution imagery and specifications.</p>
                     </div>
                     
                     <div class="flights-gallery-grid">
@@ -679,9 +578,9 @@
         <section id="view-destinations" class="view-section">
             <div class="container">
                 <div class="section-header">
-                    <span>Curated Asset Catalog</span>
-                    <h2>Filter Our World Destinations</h2>
-                    <p>Click on any premium international tourist destination or luxury resort below to experience the beauty of our global catalog.</p>
+                    <span>The Saamabee Portfolio</span>
+                    <h2>Explore World Destinations & Stays</h2>
+                    <p>Click on any premium international destination or luxury resort below to experience the beauty of our curated global portfolio.</p>
                 </div>
 
                 <!-- Gallery filter options buttons -->
@@ -723,31 +622,20 @@
 
                 <div class="benefit-grid">
                     <div class="benefit-card">
-                        <i class="fa-solid fa-mug-hot"></i>
-                        <h3>VIP Airport Lounges</h3>
-                        <p>Enjoy exclusive access to silent premium suites, fine wine, and fast-track clearance points worldwide.</p>
+                        <i class="fa-solid fa-signature"></i>
+                        <h3>Bespoke Ground Concierge</h3>
+                        <p>Your transition from tarmac to estate is completely hands-free. Enjoy personalized curbside baggage handling, expedited private customs clearance, and seamless luxury chauffeur transfers.</p>
                     </div>
                     <div class="benefit-card">
-                        <i class="fa-solid fa-couch"></i>
-                        <h3>Flatbed Comfort Suites</h3>
-                        <p>Fly relaxed in modular suite arrangements, complete with personalized dining menus and noise cancellation.</p>
+                        <i class="fa-solid fa-wine-glass"></i>
+                        <h3>Michelin-Starred In-Flight Dining</h3>
+                        <p>Indulge in seasonal culinary creations designed by world-renowned chefs, paired perfectly with rare vintage champagnes and fine wines curated by our in-house sommelier team.</p>
                     </div>
                     <div class="benefit-card">
-                        <i class="fa-solid fa-hotel"></i>
-                        <h3>Bespoke Stays Configured</h3>
-                        <p>Your flights paired perfectly with private villas, overwater bungalows, and historic heritage mansions.</p>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Absolute Discretion & Security</h3>
+                        <p>Whether traveling for high-level diplomatic delegations or private family holidays, enjoy unparalleled privacy with our dedicated VIP security services and highly trained secure ground crew.</p>
                     </div>
-                </div>
-
-                <!-- Active Reservations Profile Desk -->
-                <div class="reservations-section">
-                    <div class="section-header" style="margin-top: 40px; margin-bottom: 30px; text-align: left; max-width: 100%;">
-                        <span>Guest Profile Portal</span>
-                        <h2 style="font-size: 2.2rem; margin-bottom: 6px;">Your Active Flight & Stay Bookings</h2>
-                        <p>Manage and monitor all active simulated itineraries currently scheduled for your account profile.</p>
-                    </div>
-                    
-                    <div id="reservations-list"></div>
                 </div>
             </div>
         </section>
@@ -758,9 +646,9 @@
         <section id="view-consultation" class="view-section">
             <div class="container">
                 <div class="section-header">
-                    <span>Interactive Concierge Desk</span>
-                    <h2>Luxury Travel Advisor Wizard</h2>
-                    <p>Take our quick luxury travel style assessment, and our simulated concierge will instantly configure the perfect flight and villa package.</p>
+                    <span>Bespoke Concierge Portal</span>
+                    <h2>Luxury Travel Advisor</h2>
+                    <p>Take our quick luxury travel style assessment, and our digital concierge will instantly configure the perfect flight and villa package.</p>
                 </div>
 
                 <!-- Multi-Step assessor questionnaire card -->
@@ -856,11 +744,22 @@
                             </div>
 
                             <div style="display: flex; gap: 20px;">
-                                <button class="btn btn-primary" onclick="window.location.hash = '#/home'" style="padding: 14px 30px;">SEARCH RATES NOW</button>
+                                <button class="btn btn-primary" id="advisor-book-btn" style="padding: 14px 30px;">RESERVE CONCIERGE PACKAGE</button>
                                 <button class="btn btn-secondary" id="advisor-restart-btn" style="padding: 14px 30px;">RE-EVALUATE OPTIONS</button>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Active Reservations Profile Desk -->
+                <div class="reservations-section">
+                    <div class="section-header" style="margin-top: 40px; margin-bottom: 30px; text-align: left; max-width: 100%;">
+                        <span>Guest Profile Portal</span>
+                        <h2 style="font-size: 2.2rem; margin-bottom: 6px;">Your Active Flight & Stay Bookings</h2>
+                        <p>Manage and monitor all active provisional itineraries currently scheduled for your account profile.</p>
+                    </div>
+                    
+                    <div id="reservations-list"></div>
                 </div>
 
             </div>
