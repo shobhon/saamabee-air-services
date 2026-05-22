@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3D1" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b" />
+      <stop offset="100%" stop-color="#050b14" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded elegant background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="12" />
+  
+  <!-- Stylized wings and star emblem -->
+  <g transform="translate(256, 270) scale(1.6)">
+    <!-- Right wing -->
+    <path d="M 0,0 C 35,-20 80,-20 110,-5 C 75,5 35,5 0,0 Z" fill="url(#goldGrad)" />
+    <!-- Left wing -->
+    <path d="M 0,0 C -35,-20 -80,-20 -110,-5 C -75,5 -35,5 0,0 Z" fill="url(#goldGrad)" />
+    <!-- Center star -->
+    <path d="M 0,-45 L 8,-20 L 33,-20 L 13,-5 L 20,20 L 0,5 L -20,20 L -13,-5 L -33,-20 L -8,-20 Z" fill="url(#goldGrad)" />
+    <!-- Tail fin shape -->
+    <path d="M -5,-8 L 0,-30 L 5,-8 L 2,0 L -2,0 Z" fill="url(#goldGrad)" opacity="0.8" />
+  </g>
+</svg>
