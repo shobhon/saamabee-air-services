@@ -265,6 +265,78 @@ const IMAGE_DATABASE = [
         title: 'Couples Golden Beach Holiday',
         category: 'vistas',
         description: 'Romantic couple sharing a champagne toast on beachfront lounge chairs.'
+    },
+
+    // Famous International Destinations
+    {
+        filename: 'kashmir-dal-lake.png',
+        title: 'Serene Dal Lake, Kashmir',
+        category: 'destinations',
+        description: 'Traditional Shikara boats gliding across the calm waters of Dal Lake, surrounded by the majestic snow-capped Himalayan ranges.',
+        location: 'Srinagar, Kashmir',
+        price: 350,
+        rating: 4.9,
+        tags: ['lake', 'mountain', 'nature']
+    },
+    {
+        filename: 'kuala-lumpur-petronas.png',
+        title: 'Petronas Twin Towers, Kuala Lumpur',
+        category: 'destinations',
+        description: 'The breathtaking modern architectural marvel of the Petronas Twin Towers glowing at twilight, a top favorite city break destination.',
+        location: 'Kuala Lumpur, Malaysia',
+        price: 280,
+        rating: 4.8,
+        tags: ['city', 'skyline', 'architecture']
+    },
+    {
+        filename: 'singapore-marina-bay.png',
+        title: 'Marina Bay Sands Skyline, Singapore',
+        category: 'destinations',
+        description: 'The iconic Marina Bay Sands hotel and vibrant futuristic skyline at night, capturing the energy of Singapore.',
+        location: 'Marina Bay, Singapore',
+        price: 450,
+        rating: 4.9,
+        tags: ['city', 'luxury', 'skyline']
+    },
+    {
+        filename: 'phuket-thailand.png',
+        title: 'Tropical Paradise Phi Phi Islands, Phuket',
+        category: 'destinations',
+        description: 'A traditional wooden longtail boat resting on crystal clear turquoise waters against towering limestone cliffs in Phuket.',
+        location: 'Phuket, Thailand',
+        price: 240,
+        rating: 4.7,
+        tags: ['beach', 'island', 'tropical']
+    },
+    {
+        filename: 'dubai-skyline.png',
+        title: 'Futuristic Dubai Skyline & Burj Khalifa',
+        category: 'destinations',
+        description: 'The towering spire of Burj Khalifa soaring over the illuminated highways and futuristic cityscape of Dubai at night.',
+        location: 'Dubai, United Arab Emirates',
+        price: 550,
+        rating: 4.9,
+        tags: ['city', 'skyline', 'luxury']
+    },
+    {
+        filename: 'istanbul-turkey.png',
+        title: 'Sunset Over Hagia Sophia, Istanbul',
+        category: 'destinations',
+        description: 'A magical golden sunset outlining the historical domes and minarets of Hagia Sophia, with seagulls soaring over the Bosphorus.',
+        location: 'Istanbul, Turkey',
+        price: 390,
+        rating: 4.9,
+        tags: ['history', 'sunset', 'culture']
+    },
+    {
+        filename: 'kathmandu-nepal.png',
+        title: 'Boudhanath Stupa & Himalayas, Kathmandu',
+        category: 'destinations',
+        description: 'The historic Boudhanath Stupa decorated with colorful fluttering prayer flags, framed by the towering, snow-covered peaks of Nepal.',
+        location: 'Kathmandu, Nepal',
+        price: 190,
+        rating: 4.8,
+        tags: ['temple', 'mountain', 'heritage']
     }
 ];
 
