@@ -263,8 +263,12 @@ const IMAGE_DATABASE = [
     {
         filename: 'romantic-beach-holiday-champagne.jpg',
         title: 'Couples Golden Beach Holiday',
-        category: 'vistas',
-        description: 'Romantic couple sharing a champagne toast on beachfront lounge chairs.'
+        category: 'resorts',
+        description: 'Romantic couple sharing a champagne toast on beachfront lounge chairs.',
+        location: 'Bora Bora, French Polynesia',
+        price: 950,
+        rating: 4.9,
+        tags: ['beach', 'romantic', 'luxury']
     },
 
     // Famous International Destinations
@@ -996,13 +1000,14 @@ class GalleryController {
         const galleryGrid = document.getElementById('destinations-gallery-grid');
         if (!galleryGrid) return;
 
-        // Render full image collection strategically in gallery
-        galleryGrid.innerHTML = IMAGE_DATABASE.map(item => `
+        // Render only actual destination and resort assets, excluding aircraft/flight vistas
+        const destinationsAssets = IMAGE_DATABASE.filter(item => item.category === 'destinations' || item.category === 'resorts');
+        galleryGrid.innerHTML = destinationsAssets.map(item => `
             <div class="gallery-item" data-category="${item.category}" onclick="galleryController.openLightbox('${item.filename}')">
                 <img src="${item.filename}" alt="${item.title}" loading="lazy">
                 <div class="gallery-item-overlay">
                     <h4>${item.title}</h4>
-                    <p>${item.category}</p>
+                    <p>${item.category === 'resorts' ? 'Resort & Lodge' : 'International Destination'}</p>
                 </div>
             </div>
         `).join('');
