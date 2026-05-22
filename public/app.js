@@ -992,7 +992,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================================================
 class GalleryController {
     constructor() {
-        this.activeFilter = 'all';
+        this.activeFilter = 'destinations';
         this.initGallery();
     }
 
@@ -1038,6 +1038,9 @@ class GalleryController {
                 }
             });
         }
+
+        // Apply initial active filter (Famous Destinations)
+        this.filterGallery(this.activeFilter);
     }
 
     filterGallery(category) {
