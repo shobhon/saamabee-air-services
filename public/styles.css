@@ -176,17 +176,83 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     font-family: 'Outfit', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
     color: var(--text-primary);
+    transition: var(--transition-smooth);
 }
 
-.logo span {
+/* Logo Composite Icon Mark */
+.logo-icon-wrapper {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-sm);
+    overflow: visible;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-icon-globe {
+    font-size: 1.35rem;
+    color: var(--accent-luxury); /* Gold representing hotel/luxury stays */
+    opacity: 0.85;
+    transition: var(--transition-smooth);
+}
+
+.logo-icon-plane {
+    position: absolute;
+    font-size: 0.95rem;
+    color: var(--accent-sky); /* Cyan representing sky/flights */
+    transform: rotate(-45deg) translate(0px, 0px);
+    filter: drop-shadow(0 2px 6px rgba(0, 242, 254, 0.45));
+    transition: var(--transition-smooth);
+}
+
+/* Hover effects for brand logo mark */
+.logo:hover .logo-icon-wrapper {
+    border-color: rgba(var(--accent-sky-rgb), 0.3);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 242, 254, 0.2);
+}
+
+.logo:hover .logo-icon-globe {
+    transform: rotate(45deg);
+    color: #fff;
+    opacity: 1;
+}
+
+.logo:hover .logo-icon-plane {
+    transform: rotate(-45deg) translate(3px, -3px) scale(1.1);
     color: var(--accent-sky);
-    font-weight: 400;
+    filter: drop-shadow(0 2px 8px rgba(0, 242, 254, 0.65));
+}
+
+/* Logo Typography */
+.logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+}
+
+.logo-subtext {
+    color: var(--accent-sky);
+    font-weight: 300;
+    margin-left: 2px;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, var(--accent-sky), var(--accent-luxury));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
 }
 
 .nav-links {

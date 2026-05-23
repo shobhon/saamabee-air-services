@@ -25,8 +25,11 @@
     <header id="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo" id="logo-link">
-                <i class="fa-solid fa-plane-departure" style="color: var(--accent-sky);"></i>
-                Saamabee<span>Air</span>
+                <div class="logo-icon-wrapper">
+                    <i class="fa-solid fa-compass logo-icon-globe"></i>
+                    <i class="fa-solid fa-plane logo-icon-plane"></i>
+                </div>
+                <span class="logo-text">Saamabee<span class="logo-subtext">Air</span></span>
             </a>
             
             <nav class="nav-links" role="navigation" aria-label="Main Navigation">
@@ -162,7 +165,13 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3><i class="fa-solid fa-plane-departure" style="color: var(--accent-sky); margin-right: 8px;"></i>Saamabee<span>Air</span></h3>
+                    <h3 class="logo" style="font-size: 1.4rem; pointer-events: none;">
+                        <div class="logo-icon-wrapper" style="width: 36px; height: 36px;">
+                            <i class="fa-solid fa-compass logo-icon-globe" style="font-size: 1.15rem;"></i>
+                            <i class="fa-solid fa-plane logo-icon-plane" style="font-size: 0.8rem;"></i>
+                        </div>
+                        <span class="logo-text" style="font-size: 1.35rem;">Saamabee<span class="logo-subtext">Air</span></span>
+                    </h3>
                     <p>Dhaka's premium boutique travel agency delivering exceptional flight ticketing and hotel bookings with personalized care.</p>
                     <div class="footer-contact-info" style="margin-bottom: 24px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
                         <p style="margin-bottom: 8px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-luxury); margin-right: 8px; width: 14px;"></i>House 39, Road 17, Sector 12, Uttara, Dhaka – 1230</p>
