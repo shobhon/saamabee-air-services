@@ -656,9 +656,44 @@ header {
 
 /* 10. Contact Us Page Specific Styles */
 .contact-hero {
-    padding-top: 160px;
-    padding-bottom: 60px;
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 100px;
     text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.contact-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('saamabee-contact-hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    transform: scale(1.05);
+    transition: var(--transition-smooth);
+}
+
+.contact-hero:hover .contact-hero-bg {
+    transform: scale(1.08);
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+        rgba(8, 12, 20, 0.45) 0%, 
+        rgba(8, 12, 20, 0.8) 70%, 
+        var(--bg-base) 100%
+    );
+    z-index: -1;
 }
 
 .contact-hero h1 {
