@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Contact Us | Saamabee Air Services Uttara Dhaka</title>
+    <meta name="description" content="Get in touch with Saamabee Air Services. Visit our Uttara office in Dhaka, phone us at +88 01817047195, or email ahmadnayeemkamal@gmail.com to book airline tickets and hotel reservations.">
+    <meta name="keywords" content="Saamabee Air Services contact, travel agency Uttara, Dhaka ticketing agency phone, buy air ticket Dhaka, Bangladesh tour operator contact">
+    <meta name="author" content="Saamabee Air Services">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- External Iconography -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to Premium Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. Header & Navigation (Identical to index.html) -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" id="logo-link">
+                <i class="fa-solid fa-plane-departure" style="color: var(--accent-sky);"></i>
+                Saamabee<span>Air</span>
+            </a>
+            
+            <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link" id="nav-home">Home</a>
+                <a href="contact.html" class="nav-link active" id="nav-contact">Contact Us</a>
+                <a href="contact.html" class="nav-cta" id="nav-cta-btn">Get a Quote</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Contact Hero Header -->
+    <section class="contact-hero">
+        <div class="container">
+            <span class="intro-badge">Get In Touch</span>
+            <h1 class="gradient-text-luxury">Connect with Our Travel Experts</h1>
+            <p>Have a question or ready to book your next flight? Speak to our dedicated consultants, visit our Dhaka office, or send us a secure inquiry below.</p>
+        </div>
+    </section>
+
+    <!-- 3. Contact Main Layout (Two-Column grid) -->
+    <section style="background: var(--bg-base); padding-bottom: 100px;">
+        <div class="container">
+            <div class="contact-container-grid">
+                
+                <!-- Left Column: Precise Details & Visual Banner -->
+                <div class="contact-details glass-panel" style="border-color: rgba(var(--accent-luxury-rgb), 0.1);">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Contact Information</h2>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px;">Feel free to reach out to us using any of the communication channels below. Our team responds to all email inquiries within 24 hours.</p>
+                    
+                    <!-- Address Detail -->
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-method-text">
+                            <h3>Office Address</h3>
+                            <p>House 39, Road 17, Sector 12,<br>Uttara, Dhaka – 1230,<br>Bangladesh.</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone Detail -->
+                    <div class="contact-method air">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-method-text">
+                            <h3>Phone Number</h3>
+                            <p><a href="tel:+8801817047195" id="contact-phone-link">+88 01817047195</a></p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Available for voice calls & instant messaging queries.</p>
+                        </div>
+                    </div>
+
+                    <!-- Email Detail -->
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-method-text">
+                            <h3>Email Address</h3>
+                            <p><a href="mailto:ahmadnayeemkamal@gmail.com" id="contact-email-link">ahmadnayeemkamal@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Visual banner showing the airport banner -->
+                    <div class="contact-banner-card">
+                        <img src="saamabee-airport-contact-info-banner.jpg" alt="Dhaka airport check-in desks and travel information banner image">
+                        <div class="contact-banner-overlay">
+                            <h4>Seamless Ground Transitions</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sleek Glass Contact Form -->
+                <div class="contact-form-panel glass-panel">
+                    <h3>Send Us an Inquiry</h3>
+                    <p>Tell us about your flight requirements or hotel booking plans and our team will get back to you with custom quotes.</p>
+                    
+                    <form id="inquiry-form" action="#" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been securely sent. A Saamabee representative will contact you shortly.'); this.reset();">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="first-name" class="form-label">First Name</label>
+                                <input type="text" id="first-name" class="form-control" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name" class="form-label">Last Name</label>
+                                <input type="text" id="last-name" class="form-control" placeholder="Doe" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="+88 0181..." required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travel-type" class="form-label">Request Category</label>
+                            <select id="travel-type" class="form-control" style="background-image: none;" required>
+                                <option value="" disabled selected hidden>Select Service...</option>
+                                <option value="flights-only">Air Tickets Only (Domestic/International)</option>
+                                <option value="hotels-only">Hotel Reservations Only</option>
+                                <option value="flights-hotels">Combined Flight & Hotel Package</option>
+                                <option value="others">Other Travel Query</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Describe Your Travel Plans</label>
+                            <textarea id="message" class="form-control" placeholder="Please list desired dates, destination cities (e.g. Dhaka to Cox's Bazar or Sylhet), number of passengers, and preferred lodging style..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i>
+                            Send Secure Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer (Identical to index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fa-solid fa-plane-departure" style="color: var(--accent-sky); margin-right: 8px;"></i>Saamabee<span>Air</span></h3>
+                    <p>Dhaka's premium boutique travel agency delivering exceptional flight ticketing and hotel bookings with personalized care.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Core Services</h4>
+                    <ul>
+                        <li><a href="index.html#air-tickets">Air Tickets (Domestic)</a></li>
+                        <li><a href="index.html#air-tickets">Air Tickets (International)</a></li>
+                        <li><a href="index.html#accommodations">Hotel Bookings</a></li>
+                        <li><a href="index.html#accommodations">Luxury Resorts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#introduction">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Request a Quote</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Saamabee Air Services. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Mobile Navigation Drawer Script (Identical to index.html) -->
+    <script>
+        const mobileToggle = document.getElementById('mobile-toggle-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = 'var(--nav-height)';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'rgba(8, 12, 20, 0.95)';
+            navLinks.style.padding = '20px';
+            navLinks.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+            navLinks.style.backdropFilter = 'blur(10px)';
+        });
+
+        // Hide navigation if window is resized above mobile breakpoint
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+                navLinks.style.position = 'static';
+                navLinks.style.background = 'none';
+                navLinks.style.padding = '0';
+                navLinks.style.borderBottom = 'none';
+                navLinks.style.flexDirection = 'row';
+                navLinks.style.backdropFilter = 'none';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

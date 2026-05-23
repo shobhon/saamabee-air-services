@@ -1,837 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- SEO Optimization & Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Saamabee Air Services is your premium global transit partner. We offer bespoke first-class flights, exclusive private charter flight schedules, and luxury tropical villa reservations worldwide.">
-    <meta name="keywords" content="Saamabee, premium flights, luxury travel, first class tickets, private charter flights, five-star resorts, bespoke accommodation, worldwide transit">
+    
+    <!-- SEO Optimization -->
+    <title>Saamabee Air Services | Premium Flights & Bespoke Stays in Bangladesh</title>
+    <meta name="description" content="Saamabee Air Services is your reliable travel partner. We specialize in domestic and international airline tickets flying to and from Bangladesh, alongside premium hotel reservations worldwide.">
+    <meta name="keywords" content="Saamabee Air Services, Bangladesh flights, domestic airline tickets, international flight booking, luxury hotels Bangladesh, travel agency Uttara, Dhaka flights">
     <meta name="author" content="Saamabee Air Services">
     
-    <title>Saamabee Air Services | Premium Global Flight Booking & Bespoke Accommodation</title>
-    
-    <!-- Premium Google Typography & Iconography Libraries -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
-    
-    <!-- Luxury Favicon Collection -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
-    <!-- Link to Modular Premium Stylesheet -->
+    <!-- External Iconography -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to Premium Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ==========================================================================
-       1. Navigation Header
-       ========================================================================== -->
+    <!-- 1. Header & Navigation -->
     <header id="main-header">
         <div class="container nav-container">
-            <a href="#/home" class="logo" id="header-logo-link">Saamabee<span>Air</span></a>
+            <a href="index.html" class="logo" id="logo-link">
+                <i class="fa-solid fa-plane-departure" style="color: var(--accent-sky);"></i>
+                Saamabee<span>Air</span>
+            </a>
             
-            <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Menu" aria-expanded="false" aria-controls="main-nav">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <nav id="main-nav" role="navigation" aria-label="Primary Navigation">
-                <a href="#/home" class="active" id="nav-link-home">Home</a>
-                <a href="#/flights" id="nav-link-flights">Flights</a>
-                <a href="#/destinations" id="nav-link-destinations">Destinations</a>
-                <a href="#/accommodations" id="nav-link-accommodations">Accommodations</a>
-                <a href="#/experience" id="nav-link-experience">Experience</a>
-                <a href="#/consultation" id="nav-link-consultation">Consultation</a>
+            <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+                <a href="index.html" class="nav-link active" id="nav-home">Home</a>
+                <a href="contact.html" class="nav-link" id="nav-contact">Contact Us</a>
+                <a href="contact.html" class="nav-cta" id="nav-cta-btn">Get a Quote</a>
             </nav>
+
+            <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <!-- ==========================================================================
-       2. Main SPA View Wrapper
-       ========================================================================== -->
-    <main role="main" id="spa-view-root">
-
-        <!-- ==========================================================================
-           VIEW: HOME
-           ========================================================================== -->
-        <section id="view-home" class="view-section active">
-            <!-- Hero Landing Header -->
-            <div class="hero">
-                <div class="hero-bg" fetchpriority="high"></div>
-                <div class="hero-content">
-                    <span class="hero-badge">Bespoke Air Charter & Lodging</span>
-                    <h1>We Provide Luxury Flights and Premium Lodgings Worldwide.</h1>
-                    <p>Experience seamless global transits tailored perfectly to your schedule, connecting you with curated properties and elite fleets.</p>
-                    <div class="hero-actions">
-                        <a href="#/consultation" class="btn btn-primary">Tailor an Itinerary</a>
-                    </div>
-                </div>
+    <!-- 2. Hero Landing Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-bg" fetchpriority="high"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tagline">Excellence in Motion</span>
+            <h1 class="gradient-text-sky">Your Gateway to the Skies & Premium Stays</h1>
+            <p>Experience seamless global transits tailored perfectly to your schedule. Connecting you with world-class airlines and hand-selected five-star luxury properties.</p>
+            <div class="hero-actions">
+                <a href="#air-tickets" class="btn btn-primary">Book Flights</a>
+                <a href="#accommodations" class="btn btn-secondary">Explore Hotels</a>
             </div>
-
-
-
-            <!-- Curated Portfolio Preview highlights -->
-            <div class="container" style="margin-top: 100px;">
-                <div class="section-header">
-                    <span>Exclusive Portfolios</span>
-                    <h2>Our Curated Air Services</h2>
-                    <p>Designed to fit your high expectations. Transition gracefully from take-off runway directly into VIP airport hospitality lounges.</p>
-                </div>
-
-                <div class="services-grid">
-                    <!-- Service Card 1 -->
-                    <article class="glass-card">
-                        <div class="card-image-wrapper">
-                            <img src="saamabee-explore-the-world-cabin-window.png" alt="Passenger gaze out airplane double window view" loading="lazy">
-                            <span class="card-badge">Comfort</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Window Seats & Cabin Privacy</h3>
-                            <p>Select your favorite perspective. From breathtaking atmospheric sunrises to highly spacious, noise-insulated single-suite configurations.</p>
-                            <a href="#/experience" class="card-link">Explore Cabins <span>&rarr;</span></a>
-                        </div>
-                    </article>
-
-                    <!-- Service Card 2 -->
-                    <article class="glass-card">
-                        <div class="card-image-wrapper">
-                            <img src="airplane-wing-clouds-blue-sky.png" alt="Airliner wing sailing over fluffy clouds under blue sky" loading="lazy">
-                            <span class="card-badge">Global</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Domestic & International routes</h3>
-                            <p>Connecting you smoothly across local regional paths and extensive intercontinental flight plans alike with extreme scheduling flexibility.</p>
-                            <a href="#/destinations" class="card-link">View Destinations <span>&rarr;</span></a>
-                        </div>
-                    </article>
-
-                    <!-- Service Card 3 -->
-                    <article class="glass-card">
-                        <div class="card-image-wrapper">
-                            <img src="airplane-wing-sunset-clouds.jpg" alt="Airplane wing silhouette against orange twilight clouds" loading="lazy">
-                            <span class="card-badge">Stays</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Bespoke Stays & Residences</h3>
-                            <p>Seamlessly transition from the runway to our hand-selected portfolio of private beachfront villas and secluded mountain sanctuaries.</p>
-                            <a href="#/consultation" class="card-link">Design Stays <span>&rarr;</span></a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Split Dramatic banner Experience section -->
-            <section class="split-banner">
-                <div class="split-banner-img" aria-label="Visual spotlight on Boeing airplane nose at night"></div>
-                <div class="split-banner-content">
-                    <h2 class="serif-text">Elegance in Motion</h2>
-                    <p>Every journey tells a story. At Saamabee Air Services, we craft your itineraries with obsessive precision, aligning premium fleets and global five-star properties to fit your lifestyle seamlessly.</p>
-                    <div>
-                        <a href="#/consultation" class="btn btn-primary">Speak to an Agent</a>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-
-
-        <!-- ==========================================================================
-           VIEW: ACCOMMODATIONS
-           ========================================================================== -->
-        <section id="view-accommodations" class="view-section">
-            <!-- Luxury Editorial Header -->
-            <div class="container">
-                <div class="section-header">
-                    <span>Bespoke Guest Residences</span>
-                    <h2>Premier Stays & Private Sanctuaries</h2>
-                    <p>Immerse yourself in our curated global portfolio of five-star retreats, high-end design villas, and historic royal palaces. Seamlessly integrated with your private charter schedules.</p>
-                </div>
-            </div>
-
-            <!-- Alternating Split Showcases -->
-            <div class="container split-showcase-container">
-                
-                <!-- Showcase Row 1: Cheval Blanc -->
-                <div class="split-showcase-row">
-                    <div class="showcase-img-col">
-                        <img src="cheval-blanc-st-barths-resort.jpg" alt="Luxury pool terrace at Cheval Blanc Isle de France looking onto sandy beach and palm trees" loading="lazy">
-                        <span class="showcase-badge">Signature Stay</span>
-                    </div>
-                    <div class="showcase-content-col">
-                        <span class="showcase-loc"><i class="fa-solid fa-location-dot"></i> St. Barths, Caribbean</span>
-                        <h3 class="serif-text">Cheval Blanc Private Villa</h3>
-                        <p class="showcase-desc">Perched elegantly on the pristine white sands of St. Barths, this private garden villa represents the ultimate in Caribbean luxury. Enjoy authentic, high-end interior spaces blending natural textures with seamless indoor-outdoor living, bathed in warm tropical lighting.</p>
-                        
-                        <div class="showcase-amenities">
-                            <h4>Exclusive Suite Privileges</h4>
-                            <ul>
-                                <li><i class="fa-solid fa-water-ladder"></i> Private Ocean Plunge Pool</li>
-                                <li><i class="fa-solid fa-tree"></i> Lush Secluded Garden Deck</li>
-                                <li><i class="fa-solid fa-bell"></i> 24/7 Dedicated Butler Service</li>
-                                <li><i class="fa-solid fa-umbrella-beach"></i> Direct Beachfront Gateway</li>
-                            </ul>
-                        </div>
-
-                        <div class="showcase-booking">
-                            <div class="showcase-pricing">
-                                <span class="price-val">$1,400</span>
-                                <span class="price-unit">/ night</span>
-                            </div>
-                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Cheval Blanc Private Villa', 'Luxury Villa Stay', 1400, 'St. Barths', 'cheval-blanc-st-barths-resort.jpg')">Reserve Suite</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Showcase Row 2: Safari River Lodge & Observatory -->
-                <div class="split-showcase-row">
-                    <div class="showcase-img-col">
-                        <img src="luxury-safari-river-lodge.webp" alt="Namibian wild river lodge deck complete with astronomical stargazing telescope and fireside seating" loading="lazy">
-                        <span class="showcase-badge">Adventure Luxury</span>
-                    </div>
-                    <div class="showcase-content-col">
-                        <span class="showcase-loc"><i class="fa-solid fa-location-dot"></i> Namibia, Africa</span>
-                        <h3 class="serif-text">Safari River Lodge & Observatory</h3>
-                        <p class="showcase-desc">Immerse yourself in the raw natural beauty of the Namibian wilderness. Designed with authentic local timbers and organic stone textures, this secluded riverfront lodge features a premium elevated viewing deck equipped with a high-power telescope for spectacular starlight observation under crystal-clear African night skies.</p>
-                        
-                        <div class="showcase-amenities">
-                            <h4>Exclusive Suite Privileges</h4>
-                            <ul>
-                                <li><i class="fa-solid fa-circle-nodes"></i> Astronomical Stargazing Telescope</li>
-                                <li><i class="fa-solid fa-compass"></i> Private Guided Wilderness Safaris</li>
-                                <li><i class="fa-solid fa-fire"></i> Elevated Firepit River Observation Deck</li>
-                                <li><i class="fa-solid fa-martini-glass-citrus"></i> Premium Airport Executive Lounge Access</li>
-                            </ul>
-                        </div>
-
-                        <div class="showcase-booking">
-                            <div class="showcase-pricing">
-                                <span class="price-val">$1,250</span>
-                                <span class="price-unit">/ night</span>
-                            </div>
-                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Safari River Lodge & Observatory', 'Luxury Lodge Stay', 1250, 'Namibia, Africa', 'luxury-safari-river-lodge.webp')">Reserve Suite</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Showcase Row 3: The Indian Heritage Palace -->
-                <div class="split-showcase-row">
-                    <div class="showcase-img-col">
-                        <img src="saamabee-indian-palace-hotel-banner.png" alt="Historic red sandstone Indian palace hotel facade illuminated beautifully by warm golden sunset glow" loading="lazy">
-                        <span class="showcase-badge">Imperial Royal</span>
-                    </div>
-                    <div class="showcase-content-col">
-                        <span class="showcase-loc"><i class="fa-solid fa-location-dot"></i> Rajasthan, India</span>
-                        <h3 class="serif-text">The Indian Heritage Palace</h3>
-                        <p class="showcase-desc">Step into a bygone era of historic grandeur. This meticulously restored red sandstone palace fortress combines classic Rajasthani architecture with state-of-the-art five-star conveniences. Enjoy royal sunset dining across majestic stone battlements, complete with traditional musicians and legendary imperial hospitality.</p>
-                        
-                        <div class="showcase-amenities">
-                            <h4>Exclusive Suite Privileges</h4>
-                            <ul>
-                                <li><i class="fa-solid fa-utensils"></i> Imperial Sunset Balcony Dining</li>
-                                <li><i class="fa-solid fa-gem"></i> Grand Royal Archway Suites</li>
-                                <li><i class="fa-solid fa-handshake-angle"></i> Bespoke Traditional Royal Concierge</li>
-                                <li><i class="fa-solid fa-car-side"></i> Elite Private Chauffeur Airport Transits</li>
-                            </ul>
-                        </div>
-
-                        <div class="showcase-booking">
-                            <div class="showcase-pricing">
-                                <span class="price-val">$1,500</span>
-                                <span class="price-unit">/ night</span>
-                            </div>
-                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('The Indian Heritage Palace', 'Historic Palace Suite', 1500, 'Rajasthan, India', 'saamabee-indian-palace-hotel-banner.png')">Reserve Suite</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- "More Curated Premium Stays" Grid -->
-            <div class="accommodations-grid-section">
-                <div class="container">
-                    <div class="section-header" style="margin-top: 60px; margin-bottom: 40px;">
-                        <span>The Curated Collection</span>
-                        <h2>Global Residences</h2>
-                        <p>Explore exclusive, hand-selected retreats spanning turquoise ocean shores and spectacular hillside sanctuaries.</p>
-                    </div>
-
-                    <div class="services-grid">
-                        
-                        <!-- Stay Card 1: Pangkor Laut -->
-                        <article class="glass-card">
-                            <div class="card-image-wrapper">
-                                <img src="pangkor-laut-resort-malaysia.jpg" alt="Overwater luxury villas standing above clear emerald sea water at Pangkor Laut Resort" loading="lazy">
-                                <span class="card-badge">Overwater</span>
-                            </div>
-                            <div class="card-body">
-                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
-                                    <span style="font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px;"><i class="fa-solid fa-location-dot"></i> Malaysia</span>
-                                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fa-solid fa-star" style="color: var(--accent);"></i> 4.8</span>
-                                </div>
-                                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Pangkor Laut Overwater Resort</h3>
-                                <p style="font-size: 0.85rem; margin-bottom: 20px;">Premium stilted bungalows stretching gracefully into a tranquil, warm emerald Malaysian sea. Private wooden walkways and spectacular marine life views.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
-                                    <div>
-                                        <span style="font-size: 1.25rem; font-weight: 500; color: var(--text);">$890</span>
-                                        <span style="font-size: 0.75rem; color: var(--text-muted);">/ night</span>
-                                    </div>
-                                    <button class="btn btn-secondary" onclick="searchController.openDirectBooking('Pangkor Laut Overwater Resort', 'Overwater Bungalow', 890, 'Pangkor Laut, Malaysia', 'pangkor-laut-resort-malaysia.jpg')" style="padding: 10px 18px; font-size: 0.7rem;">Book Stay</button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Stay Card 2: Viceroy Sugar Beach -->
-                        <article class="glass-card">
-                            <div class="card-image-wrapper">
-                                <img src="sugar-beach-viceroy-resort.jpg" alt="Luxury beachfront villa patio terrace with lounge chairs and white sandy beach at Sugar Beach St. Lucia" loading="lazy">
-                                <span class="card-badge">Beachfront</span>
-                            </div>
-                            <div class="card-body">
-                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
-                                    <span style="font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px;"><i class="fa-solid fa-location-dot"></i> St. Lucia</span>
-                                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fa-solid fa-star" style="color: var(--accent);"></i> 4.9</span>
-                                </div>
-                                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Viceroy Sugar Beach Resort</h3>
-                                <p style="font-size: 0.85rem; margin-bottom: 20px;">Private luxury terrace and pool nested perfectly between the dramatic Piton volcanic peaks, opening onto sugar-white Caribbean sands.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
-                                    <div>
-                                        <span style="font-size: 1.25rem; font-weight: 500; color: var(--text);">$850</span>
-                                        <span style="font-size: 0.75rem; color: var(--text-muted);">/ night</span>
-                                    </div>
-                                    <button class="btn btn-secondary" onclick="searchController.openDirectBooking('Viceroy Sugar Beach Resort', 'Beachfront Suite', 850, 'St. Lucia, Caribbean', 'sugar-beach-viceroy-resort.jpg')" style="padding: 10px 18px; font-size: 0.7rem;">Book Stay</button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Stay Card 3: Royal Twilight Villas -->
-                        <article class="glass-card">
-                            <div class="card-image-wrapper">
-                                <img src="luxury-hillside-villas-twilight.jpg" alt="Hillside tropical thatched villas with heated plunge pools glowing at twilight in Bali" loading="lazy">
-                                <span class="card-badge">Exclusive</span>
-                            </div>
-                            <div class="card-body">
-                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
-                                    <span style="font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px;"><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</span>
-                                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fa-solid fa-star" style="color: var(--accent);"></i> 5.0</span>
-                                </div>
-                                <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Royal Twilight Villas</h3>
-                                <p style="font-size: 0.85rem; margin-bottom: 20px;">Spectacular multi-level hillside sanctuary in Bali, featuring heated private pools and traditional thatched villas glowing warmly at twilight.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
-                                    <div>
-                                        <span style="font-size: 1.25rem; font-weight: 500; color: var(--text);">$1,150</span>
-                                        <span style="font-size: 0.75rem; color: var(--text-muted);">/ night</span>
-                                    </div>
-                                    <button class="btn btn-secondary" onclick="searchController.openDirectBooking('Royal Twilight Villas', 'Hillside Plunge Villa', 1150, 'Bali, Indonesia', 'luxury-hillside-villas-twilight.jpg')" style="padding: 10px 18px; font-size: 0.7rem;">Book Stay</button>
-                                </div>
-                            </div>
-                        </article>
-
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-           VIEW: FLIGHTS (Premium Aviation & Fleet Showcase)
-           ========================================================================== -->
-        <section id="view-flights" class="view-section">
-            <!-- 1. Hero Landing Header -->
-            <div class="flights-hero-section">
-                <div class="flights-hero-bg"></div>
-                <div class="flights-hero-content">
-                    <span class="flights-hero-badge">Bespoke Global Charter</span>
-                    <h1>The Saamabee Fleet — Elevated Sky Travel</h1>
-                    <p>Indulge in absolute comfort and engineering brilliance. Our hand-selected modern aircraft are engineered to turn intercontinental journeys into seamless extensions of your luxury lifestyle.</p>
-                </div>
-            </div>
-
-            <!-- 2. Alternating Fleet Showcase -->
-            <div class="split-showcase-container container">
-                <!-- Airbus A350 Signature -->
-                <article class="split-showcase-row">
-                    <div class="showcase-img-col">
-                        <span class="showcase-badge">Flagship Class</span>
-                        <img src="airbus-a350-nose-sunset.jpg" alt="Airbus A350 Signature Flightdeck Nose" loading="lazy">
-                    </div>
-                    <div class="showcase-content-col">
-                        <div class="showcase-loc"><i class="fa-solid fa-plane-up"></i> Airbus A350-1000 Signature</div>
-                        <h3>Whisper-Quiet Flagship</h3>
-                        <p class="showcase-desc">Experience global transit in our whisper-quiet Airbus A350-1000 flagship. Featuring a custom carbon-composite airframe, exceptionally wide private layout, and low cabin altitude pressurization designed to preserve natural physical vitality across time zones.</p>
-                        
-                        <div class="showcase-amenities">
-                            <h4>Flight Specifications & Perks</h4>
-                            <ul>
-                                <li><i class="fa-solid fa-network-wired"></i> 12,000 km Non-stop Range</li>
-                                <li><i class="fa-solid fa-gauge-high"></i> Mach 0.89 Cruising Speed</li>
-                                <li><i class="fa-solid fa-couch"></i> 12 Private First-Class Suites</li>
-                                <li><i class="fa-solid fa-utensils"></i> Bespoke Private Dining Menu</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="showcase-booking">
-                            <div class="showcase-pricing">
-                                <span class="price-val">$1,850</span>
-                                <span class="price-unit">/ flight hr</span>
-                            </div>
-                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Airbus A350 Signature Charter', 'Ultra-Long Range Jet', 1850, 'Global Private Charter', 'airbus-a350-nose-sunset.jpg')">Book Airbus A350</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Boeing 787 Dreamliner -->
-                <article class="split-showcase-row">
-                    <div class="showcase-img-col">
-                        <span class="showcase-badge">Nocturnal Class</span>
-                        <img src="red-dreamliner-airplane-night.jpg" alt="Boeing 787 Dreamliner Spotlit" loading="lazy">
-                    </div>
-                    <div class="showcase-content-col">
-                        <div class="showcase-loc"><i class="fa-solid fa-plane-up"></i> Boeing 787 Nocturnal Dreamliner</div>
-                        <h3>Circadian Sanctuary</h3>
-                        <p class="showcase-desc">Fly the Boeing 787 Dreamliner, engineered with advanced smart climate controls that naturally regulate cabin humidity and pressure. Outfitted with auto-dimming electrochromic panoramic glass and intelligent circadian spectrum lighting that completely mitigates jet lag.</p>
-                        
-                        <div class="showcase-amenities">
-                            <h4>Flight Specifications & Perks</h4>
-                            <ul>
-                                <li><i class="fa-solid fa-network-wired"></i> 14,000 km Direct Range</li>
-                                <li><i class="fa-solid fa-gauge-high"></i> Mach 0.85 Cruising Speed</li>
-                                <li><i class="fa-solid fa-couch"></i> 8 VVIP Fully Enclosed Pods</li>
-                                <li><i class="fa-solid fa-cloud"></i> Circum-Polar Climate System</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="showcase-booking">
-                            <div class="showcase-pricing">
-                                <span class="price-val">$1,550</span>
-                                <span class="price-unit">/ flight hr</span>
-                            </div>
-                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Boeing 787 Nocturnal Dreamliner Charter', 'Bespoke Executive Dreamliner', 1550, 'Global Private Charter', 'red-dreamliner-airplane-night.jpg')">Book Dreamliner</button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Boeing Intercontinental Jet -->
-                <article class="split-showcase-row">
-                    <div class="showcase-img-col">
-                        <span class="showcase-badge">Intercontinental Class</span>
-                        <img src="boeing-airplane-nose-sky-front.jpg" alt="Boeing Intercontinental Jet Climbing" loading="lazy">
-                    </div>
-                    <div class="showcase-content-col">
-                        <div class="showcase-loc"><i class="fa-solid fa-plane-up"></i> Boeing Intercontinental Jet</div>
-                        <h3>Supreme Delegation Cruiser</h3>
-                        <p class="showcase-desc">Our premier double-deck intercontinental cruiser, designed specifically for high-capacity ultra-luxurious corporate and diplomatic delegations. Complete with a private dining salon, dedicated conference chambers, and separate presidential sleeping suites.</p>
-                        
-                        <div class="showcase-amenities">
-                            <h4>Flight Specifications & Perks</h4>
-                            <ul>
-                                <li><i class="fa-solid fa-network-wired"></i> 15,000 km Maximum Range</li>
-                                <li><i class="fa-solid fa-gauge-high"></i> Mach 0.92 Cruising Speed</li>
-                                <li><i class="fa-solid fa-couch"></i> 16 Prestige Staterooms</li>
-                                <li><i class="fa-solid fa-handshake"></i> Boardroom & Dining Salon</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="showcase-booking">
-                            <div class="showcase-pricing">
-                                <span class="price-val">$2,100</span>
-                                <span class="price-unit">/ flight hr</span>
-                            </div>
-                            <button class="btn btn-primary" onclick="searchController.openDirectBooking('Boeing Intercontinental Jet Charter', 'VVIP Delegation Flagship', 2100, 'Global Private Charter', 'boeing-airplane-nose-sky-front.jpg')">Book Intercontinental</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <!-- 3. Aviation Engineering & Experience Grid -->
-            <div class="flights-experience-section">
-                <div class="container">
-                    <div class="section-header" style="text-align: center;">
-                        <span>Elite Infrastructure</span>
-                        <h2>Aviation Engineering & Experience</h2>
-                        <p>Our fleet features world-class technology to deliver a secure, peaceful, and absolutely comfortable flight experience.</p>
-                    </div>
-                    
-                    <div class="flights-experience-grid">
-                        <div class="flights-experience-card">
-                            <div class="flights-experience-card-icon"><i class="fa-solid fa-wind"></i></div>
-                            <h3>Airflow Architecture</h3>
-                            <p>Advanced environmental control systems that fully recycle and purify cabin air every two minutes, ensuring natural hydration levels are maintained.</p>
-                        </div>
-                        
-                        <div class="flights-experience-card">
-                            <div class="flights-experience-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
-                            <h3>Global Dispatch</h3>
-                            <p>Our dedicated 24/7 flight operations center proactively monitors global weather patterns, ensuring flight paths are optimized for absolute stability.</p>
-                        </div>
-                        
-                        <div class="flights-experience-card">
-                            <div class="flights-experience-card-icon"><i class="fa-solid fa-gears"></i></div>
-                            <h3>Precision Engineering</h3>
-                            <p>Advanced active vibration damping and architectural acoustic isolation reduce interior noise levels to absolute whisper-quiet margins.</p>
-                        </div>
-                        
-                        <div class="flights-experience-card">
-                            <div class="flights-experience-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                            <h3>Active Navigation</h3>
-                            <p>Next-generation navigation telemetry overlays and flight safety architectures ensure absolute stability through weather and turbulences.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. Interactive Close-Ups Gallery -->
-            <div class="flights-gallery-section">
-                <div class="container">
-                    <div class="section-header" style="text-align: center;">
-                        <span>Curated Close-Ups</span>
-                        <h2>Interactive Aviation Gallery</h2>
-                        <p>Explore detailed perspective views of our premium fleet. Select any aircraft to view high-resolution imagery and specifications.</p>
-                    </div>
-                    
-                    <div class="flights-gallery-grid">
-                        <!-- Turbofan 1 -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-turbofan-engine-runway.jpg')">
-                            <img src="airplane-turbofan-engine-runway.jpg" alt="Intake Cowling Diagnostics" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Turbofan Intake</h3>
-                                <p>Close-up of the ultra-efficient Rolls-Royce jet powerplant intake casing.</p>
-                            </div>
-                        </div>
-
-                        <!-- Turbofan 2 -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('boeing-777-engine-close-up-sunset.jpg')">
-                            <img src="boeing-777-engine-close-up-sunset.jpg" alt="Boeing 777 Powerplant reflection" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Sunset Engine Glow</h3>
-                                <p>Golden sunset hues reflecting on the heavy titanium turbofan blades.</p>
-                            </div>
-                        </div>
-
-                        <!-- Vintage Flagship -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('vintage-polished-metal-airplane.jpg')">
-                            <img src="vintage-polished-metal-airplane.jpg" alt="Heritage radial flagship classic" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Heritage Classic</h3>
-                                <p>Polished aluminum fuselage detailing of our radial classic flagship.</p>
-                            </div>
-                        </div>
-
-                        <!-- Cockpit -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-cockpit-nose-with-flying-plane.jpg')">
-                            <img src="airplane-cockpit-nose-with-flying-plane.jpg" alt="Avionics instrumentation flightdeck" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Flightdeck Avionics</h3>
-                                <p>Advanced instruments panel view capturing atmospheric twilight transit.</p>
-                            </div>
-                        </div>
-
-                        <!-- Wing Sunset -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-wing-sunset-clouds.jpg')">
-                            <img src="airplane-wing-sunset-clouds.jpg" alt="Ethereal Wing sunset sky" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Sunset Wing Profile</h3>
-                                <p>Ethereal wing profile slicing smoothly through golden hour clouds.</p>
-                            </div>
-                        </div>
-
-                        <!-- Wing Blue Sky -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('airplane-wing-clouds-blue-sky.png')">
-                            <img src="airplane-wing-clouds-blue-sky.png" alt="Wing perspective over blue skies" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Sky Oceans</h3>
-                                <p>Crystalline wing profile soaring majestically over deep blue horizons.</p>
-                            </div>
-                        </div>
-
-                        <!-- Window view -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('saamabee-explore-the-world-cabin-window.png')">
-                            <img src="saamabee-explore-the-world-cabin-window.png" alt="Cabin Window Suite seat view" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Cabin Port View</h3>
-                                <p>Serene cloudscape vistas seen from the comfort of our first class seats.</p>
-                            </div>
-                        </div>
-
-                        <!-- Spotlit aircraft -->
-                        <div class="flights-gallery-item" onclick="galleryController.openLightbox('dramatic-airplane-night-spotlight.jpeg')">
-                            <img src="dramatic-airplane-night-spotlight.jpeg" alt="Private corporate jet spotlit" loading="lazy">
-                            <div class="flights-gallery-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <h3>Nocturnal Staging</h3>
-                                <p>Spotlight illuminated business jet aircraft ready for boarding.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-           VIEW: DESTINATIONS
-           ========================================================================== -->
-        <section id="view-destinations" class="view-section">
-            <div class="container">
-                <div class="section-header">
-                    <span>The Saamabee Portfolio</span>
-                    <h2>Explore World Destinations & Stays</h2>
-                    <p>Click on any premium international destination or luxury resort below to experience the beauty of our curated global portfolio.</p>
-                </div>
-
-                <!-- Gallery filter options buttons -->
-                <div class="gallery-filters">
-                    <button class="filter-btn active" data-filter="destinations">Famous Destinations</button>
-                    <button class="filter-btn" data-filter="resorts">Resorts & Lodges</button>
-                </div>
-
-                <!-- Dynamic Grid container -->
-                <div class="gallery-grid" id="destinations-gallery-grid"></div>
-            </div>
-
-            <!-- Full-Screen Accessible Image Lightbox overlay -->
-            <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Expanded Image View">
-                <div class="lightbox-content">
-                    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Lightbox">&times;</button>
-                    <div class="lightbox-img-wrapper">
-                        <img src="" alt="" id="lightbox-img">
-                    </div>
-                    <div class="lightbox-caption">
-                        <h3 id="lightbox-caption-title"></h3>
-                        <p id="lightbox-caption-desc"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-           VIEW: EXPERIENCE
-           ========================================================================== -->
-        <section id="view-experience" class="view-section">
-            <!-- Storytelling / benefits header -->
-            <div class="container">
-                <div class="section-header">
-                    <span>The Saamabee Standard</span>
-                    <h2>Elegance Meets Atmospheric Flight</h2>
-                    <p>We configure every itinerary with obsessive dedication, securing private lounge permissions and flatbed seats so you transition smoothly.</p>
-                </div>
-
-                <div class="benefit-grid">
-                    <div class="benefit-card">
-                        <i class="fa-solid fa-signature"></i>
-                        <h3>Bespoke Ground Concierge</h3>
-                        <p>Your transition from tarmac to estate is completely hands-free. Enjoy personalized curbside baggage handling, expedited private customs clearance, and seamless luxury chauffeur transfers.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fa-solid fa-wine-glass"></i>
-                        <h3>Michelin-Starred In-Flight Dining</h3>
-                        <p>Indulge in seasonal culinary creations designed by world-renowned chefs, paired perfectly with rare vintage champagnes and fine wines curated by our in-house sommelier team.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h3>Absolute Discretion & Security</h3>
-                        <p>Whether traveling for high-level diplomatic delegations or private family holidays, enjoy unparalleled privacy with our dedicated VIP security services and highly trained secure ground crew.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================================================
-           VIEW: CONSULTATION
-           ========================================================================== -->
-        <section id="view-consultation" class="view-section">
-            <div class="container">
-                <div class="section-header">
-                    <span>Bespoke Concierge Portal</span>
-                    <h2>Luxury Travel Advisor</h2>
-                    <p>Take our quick luxury travel style assessment, and our digital concierge will instantly configure the perfect flight and villa package.</p>
-                </div>
-
-                <!-- Multi-Step assessor questionnaire card -->
-                <div class="advisor-card" id="advisor-wizard-card">
-                    <div class="advisor-intro">
-                        <i class="fa-solid fa-compass" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
-                        <h3>Design Your Next Escape</h3>
-                    </div>
-
-                    <!-- Step 1: Lifestyle -->
-                    <div class="advisor-step active" id="advisor-step-1">
-                        <h4>1. Select Your Preferred Vacation Lifestyle</h4>
-                        <div class="options-grid">
-                            <div class="option-card" data-group="style" data-value="honeymoon">
-                                <i class="fa-solid fa-heart"></i>
-                                <h5>Romantic Escape</h5>
-                                <p>Quiet beachfront plunge pools and champagne toasts.</p>
-                            </div>
-                            <div class="option-card" data-group="style" data-value="safari">
-                                <i class="fa-solid fa-binoculars"></i>
-                                <h5>Wildlife Safari</h5>
-                                <p>Observatory lodge decks, stargazing, and animal transits.</p>
-                            </div>
-                            <div class="option-card" data-group="style" data-value="corporate">
-                                <i class="fa-solid fa-briefcase"></i>
-                                <h5>Heritage Corporate</h5>
-                                <p>Summit conferences inside historic royal palaces.</p>
-                            </div>
-                            <div class="option-card" data-group="style" data-value="leisure">
-                                <i class="fa-solid fa-umbrella-beach"></i>
-                                <h5>Tropical Leisure</h5>
-                                <p>Infinite luxury beach pools and luxury spas.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Budget Configuration -->
-                    <div class="advisor-step" id="advisor-step-2">
-                        <h4>2. Select Your Preferred Transit Configuration</h4>
-                        <div class="options-grid">
-                            <div class="option-card" data-group="budget" data-value="first">
-                                <i class="fa-solid fa-crown"></i>
-                                <h5>First Class Privilege</h5>
-                                <p>Standard airliner premium suites and VIP lounge desks.</p>
-                            </div>
-                            <div class="option-card" data-group="budget" data-value="charter">
-                                <i class="fa-solid fa-plane"></i>
-                                <h5>Ultra-Luxury Private Charter</h5>
-                                <p>Bespoke custom flight plans and isolated suites.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Wizard Control Buttons -->
-                    <div class="advisor-footer">
-                        <button class="btn btn-secondary" id="advisor-prev-btn" style="visibility: hidden;">BACK</button>
-                        <button class="btn btn-primary" id="advisor-next-btn">CONTINUE</button>
-                    </div>
-                </div>
-
-                <!-- Matched Recommendation outputs -->
-                <div class="rec-output" id="advisor-rec-card">
-                    <div class="rec-card">
-                        <div class="rec-hero">
-                            <img src="" alt="" id="rec-hero-img">
-                            <div class="rec-hero-overlay">
-                                <span id="rec-status-tag">Saamabee Custom Itinerary Recommendation</span>
-                                <h4 id="rec-title"></h4>
-                            </div>
-                        </div>
-                        <div class="rec-body">
-                            <div class="rec-details-grid">
-                                <div class="rec-detail-item">
-                                    <div class="rec-detail-title">Resort Stay Destination</div>
-                                    <div class="rec-detail-value" id="rec-resort-title"></div>
-                                    <span style="font-size: 0.8rem; color: var(--text-muted);" id="rec-resort-loc"></span>
-                                </div>
-                                <div class="rec-detail-item">
-                                    <div class="rec-detail-title">Transit Configuration</div>
-                                    <div class="rec-detail-value" id="rec-flight-spec"></div>
-                                    <span style="font-size: 0.8rem; color: var(--text-muted);" id="rec-flight-airline"></span>
-                                </div>
-                                <div class="rec-detail-item">
-                                    <div class="rec-detail-title">Approximate Cost per VIP</div>
-                                    <div class="rec-detail-value" id="rec-cost-val" style="color: var(--accent); font-weight: 600;"></div>
-                                    <span style="font-size: 0.8rem; color: var(--text-muted);">Includes flights and villa stay</span>
-                                </div>
-                            </div>
-                            
-                            <div class="rec-description">
-                                <h5>Expedition Itinerary Overview</h5>
-                                <p id="rec-itinerary-desc"></p>
-                            </div>
-
-                            <div style="display: flex; gap: 20px;">
-                                <button class="btn btn-primary" id="advisor-book-btn" style="padding: 14px 30px;">RESERVE CONCIERGE PACKAGE</button>
-                                <button class="btn btn-secondary" id="advisor-restart-btn" style="padding: 14px 30px;">RE-EVALUATE OPTIONS</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Active Reservations Profile Desk -->
-                <div class="reservations-section">
-                    <div class="section-header" style="margin-top: 40px; margin-bottom: 30px; text-align: left; max-width: 100%;">
-                        <span>Guest Profile Portal</span>
-                        <h2 style="font-size: 2.2rem; margin-bottom: 6px;">Your Active Flight & Stay Bookings</h2>
-                        <p>Manage and monitor all active provisional itineraries currently scheduled for your account profile.</p>
-                    </div>
-                    
-                    <div id="reservations-list"></div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ==========================================================================
-       3. Sliding Reservation Drawer Overlay
-       ========================================================================== -->
-    <aside class="drawer" id="booking-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
-        <div class="drawer-header">
-            <h3 id="drawer-title">Secure Booking</h3>
-            <button class="drawer-close" id="drawer-close-btn" aria-label="Close Reservation Drawer">&times;</button>
         </div>
-        
-        <div class="drawer-body">
-            <!-- Target summary populated by appJS -->
-            <div id="booking-summary-details"></div>
-            
-            <form id="drawer-booking-form" style="display: flex; flex-direction: column; gap: 20px;">
-                <div class="form-group">
-                    <label for="booking-client-name">Lead Guest Full Name</label>
-                    <input type="text" id="booking-client-name" placeholder="E.g. Mr. John Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="booking-client-email">Email Address for Tickets</label>
-                    <input type="email" id="booking-client-email" placeholder="E.g. passenger@luxury.com" required>
+    </section>
+
+    <!-- 3. Welcoming Introduction Section -->
+    <section class="section-padding" id="introduction" style="position: relative; background: var(--bg-base);">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <span class="intro-badge">Who We Are</span>
+                    <h2>A Reliable Partner for All Your Journeys</h2>
+                    <p>Saamabee Air Services is a premier boutique travel and ticketing agency dedicated to crafting effortless travel experiences. Whether you are flying domestically across Bangladesh or planning a complex international itinerary, we handle every detail with absolute precision and client-focused hospitality.</p>
+                    <p>From the moment you start planning to the time you settle into your hand-selected hotel room, our mission is to ensure your journey is smooth, comfortable, and completely hassle-free.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item air">
+                            <div class="feature-icon-wrapper">
+                                <i class="fa-solid fa-ticket"></i>
+                            </div>
+                            <div>
+                                <h4>Bangladesh Ticketing Experts</h4>
+                                <p>Specialized routes connecting major domestic cities and global hubs.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item hotel">
+                            <div class="feature-icon-wrapper">
+                                <i class="fa-solid fa-hotel"></i>
+                            </div>
+                            <div>
+                                <h4>Curated Stays</h4>
+                                <p>Bespoke partnerships with premier hotels and luxury resorts worldwide.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 15px;">CONFIRM RESERVATION</button>
-            </form>
+                <div class="intro-visual">
+                    <img src="saamabee-explore-the-world-cabin-window.png" alt="Stunning view of the sky from a luxury cabin window">
+                    <div class="intro-visual-overlay">
+                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Explore Without Boundaries</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0;">Our flight mapping networks connect you directly from Dhaka to the rest of the world.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </aside>
+    </section>
 
-    <!-- ==========================================================================
-       4. Footer Component
-       ========================================================================== -->
-    <footer id="main-footer" role="contentinfo">
-        <div class="footer-grid">
-            <div class="footer-about">
-                <h2>Saamabee Air Services</h2>
-                <p>A premier luxury solution for corporate and leisure travel planning across domestic frontiers and international horizons. Securing custom flight plans and accommodations worldwide.</p>
+    <!-- 4. Service Category 1: Air Tickets -->
+    <section class="section-padding" id="air-tickets" style="background: radial-gradient(circle at 10% 50%, rgba(0, 242, 254, 0.03) 0%, transparent 50%); border-top: 1px solid rgba(255, 255, 255, 0.03);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag tag-air">Service Category</span>
+                <h2>Global Aviation & Flight Bookings</h2>
+                <p>Enjoy unparalleled scheduling flexibility and flight comfort. We secure the best airline tickets for domestic routes inside Bangladesh and global flights worldwide.</p>
             </div>
-            
-            <div class="footer-links">
-                <h4>Explore Services</h4>
-                <ul>
-                    <li><a href="#/home">Landing Desk</a></li>
-                    <li><a href="#/accommodations">Premier Accommodations</a></li>
-                    <li><a href="#/destinations">Filter Portfolios</a></li>
-                    <li><a href="#/experience">VIP Cabin Experiences</a></li>
-                    <li><a href="#/consultation">Concierge Advisor</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact">
-                <h4>Corporate Desk</h4>
-                <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> <span><strong>Address:</strong> House 39, Road 17, Sector 12, Uttara, Dhaka-1230, Bangladesh</span></p>
-                <p><i class="fa-solid fa-phone" style="color: var(--accent);"></i> <span><strong>Phone:</strong> +88 01817047195</span></p>
-                <p><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> <span><strong>Email:</strong> ahmadnayeemkamal@gmail.com</span></p>
+
+            <div class="ticket-grid">
+                <!-- Interactive Cards Grid showcasing aircraft images -->
+                <div class="cards-showcase">
+                    <div class="service-card glass-panel" id="aircraft-card-1">
+                        <img src="airbus-a350-nose-sunset.jpg" alt="A350 aircraft nose highlighted by a sunset glow" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Flagship Airbus fleet</h3>
+                            <p>Modern widebody aircraft for maximum long-haul comfort.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card glass-panel" id="aircraft-card-2">
+                        <img src="boeing-airplane-nose-sky-front.jpg" alt="Boeing airplane nose climbing majestically into blue skies" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Premium Jetliners</h3>
+                            <p>Direct routes connecting Bangladesh and international destinations.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card glass-panel" id="aircraft-card-3" style="grid-column: span 2; aspect-ratio: 2 / 1;">
+                        <img src="airplane-wing-clouds-blue-sky.png" alt="Airliner wing sailing smoothly over clouds" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Sky-High Luxury</h3>
+                            <p>Premium class configurations and dedicated inflight seating preferences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descriptive Panel with Placeholders -->
+                <div class="service-info-panel glass-panel">
+                    <h3 class="gradient-text-sky">Domestic & International Tickets</h3>
+                    <p>Saamabee Air Services bridges the skies between Bangladesh and the rest of the world. We offer comprehensive ticketing services for all major airlines, providing competitive rates and optimal flight connections.</p>
+                    
+                    <ul class="info-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Domestic Routes:</strong> Complete coverage for Dhaka, Chittagong, Sylhet, Cox's Bazar, and all local airports.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>International Routes:</strong> Seamless transfers to Europe, North America, the Gulf region, Southeast Asia, and beyond.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>24/7 Booking Support:</strong> Live assistance to manage flight delays, re-routings, and baggage claims.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Text Placeholder Area -->
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 20px; border-radius: var(--border-radius-sm); border: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+                            <i class="fa-solid fa-circle-info" style="color: var(--accent-sky); margin-right: 8px;"></i>
+                            <em>[Ticketing write-up placeholder: Detailed airline partnerships, baggage allowances, special flight charter options, and domestic booking guidelines will be expanded here by the client at a later date.]</em>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 Saamabee Air Services. All Rights Reserved.</p>
-            <p>Designed with Luxury Standard</p>
+    </section>
+
+    <!-- 5. Service Category 2: Accommodation -->
+    <section class="section-padding" id="accommodations" style="background: radial-gradient(circle at 90% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%); border-top: 1px solid rgba(255, 255, 255, 0.03);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag tag-hotel">Service Category</span>
+                <h2>Luxury Accommodations & Resort Stays</h2>
+                <p>Complete your journey with pre-vetted lodging partnerships. We handle hotel and private villa reservations, securing special privileges and competitive group booking packages.</p>
+            </div>
+
+            <div class="accommodation-grid">
+                <!-- Descriptive Panel with Placeholders -->
+                <div class="service-info-panel glass-panel" style="border-color: rgba(var(--accent-luxury-rgb), 0.1);">
+                    <h3 class="gradient-text-luxury">Bespoke Hotel Reservations</h3>
+                    <p>A great journey requires an exceptional stay. We partner with five-star luxury hotel chains, boutique wellness retreats, and intimate private lodges globally and locally to match your specific lifestyle preferences.</p>
+                    
+                    <ul class="info-list hotel-info">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Vetted Properties:</strong> Access to pre-screened hotels ensuring comfort, safety, and excellent amenities.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Exclusive VIP Perks:</strong> Enjoy potential room upgrades, complimentary breakfast, early check-in, and spa vouchers.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Tailored Group Rates:</strong> Custom packages for corporate delegations, family reunions, and destination events.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Text Placeholder Area -->
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 20px; border-radius: var(--border-radius-sm); border: 1px dashed rgba(255, 255, 255, 0.1);">
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+                            <i class="fa-solid fa-circle-info" style="color: var(--accent-luxury); margin-right: 8px;"></i>
+                            <em>[Hotel bookings write-up placeholder: Preferred hotel chain partnerships, loyalty benefit integrations, holiday itinerary customizers, and villa booking FAQs will be expanded here by the client at a later date.]</em>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interactive Cards Grid showcasing hotel images -->
+                <div class="cards-showcase">
+                    <div class="service-card hotel-card glass-panel" id="hotel-card-1">
+                        <img src="luxury-resort-swimming-pool-night.jpg" alt="Stunning swimming pool deck at a luxury five-star resort at night" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Bespoke Stays</h3>
+                            <p>Hand-picked boutique properties worldwide.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card hotel-card glass-panel" id="hotel-card-2">
+                        <img src="sugar-beach-viceroy-resort.jpg" alt="Luxury beachfront villa patio looking directly onto pristine white sands" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Pristine Retreats</h3>
+                            <p>Exclusive beachfront villas and scenic mountain sanctuaries.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card hotel-card glass-panel" id="hotel-card-3" style="grid-column: span 2; aspect-ratio: 2 / 1;">
+                        <img src="saamabee-accommodation-tropical-villa-ad.png" alt="Luxury tropical pool deck villa advertisement banner" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Unrivaled Hospitality</h3>
+                            <p>Elite lodging arrangements aligned seamlessly with flight paths.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Call-to-action Section banner -->
+    <section class="section-padding" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(8, 12, 20, 0.95) 100%); border-top: 1px solid rgba(255, 255, 255, 0.03); text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; top:-50%; left:-50%; width:200%; height:200%; background: radial-gradient(circle, rgba(0,242,254,0.03) 0%, rgba(212,175,55,0.02) 50%, transparent 100%); z-index:0; pointer-events: none;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 style="font-size: 2.8rem; margin-bottom: 20px;">Ready to Plan Your Next Journey?</h2>
+            <p style="max-width: 600px; margin: 0 auto 40px auto; font-size: 1.15rem;">Let the dedicated travel consultants at Saamabee Air Services design a personalized itinerary that aligns flights and premium lodging flawlessly.</p>
+            <a href="contact.html" class="btn btn-primary">Connect with an Advisor</a>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fa-solid fa-plane-departure" style="color: var(--accent-sky); margin-right: 8px;"></i>Saamabee<span>Air</span></h3>
+                    <p>Dhaka's premium boutique travel agency delivering exceptional flight ticketing and hotel bookings with personalized care.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Core Services</h4>
+                    <ul>
+                        <li><a href="#air-tickets">Air Tickets (Domestic)</a></li>
+                        <li><a href="#air-tickets">Air Tickets (International)</a></li>
+                        <li><a href="#accommodations">Hotel Bookings</a></li>
+                        <li><a href="#accommodations">Luxury Resorts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#introduction">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Request a Quote</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Saamabee Air Services. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Include SPA Routing and Logic Engine -->
-    <script src="app.js"></script>
+    <!-- Simple Mobile Navigation Drawer Script -->
+    <script>
+        const mobileToggle = document.getElementById('mobile-toggle-btn');
+        const navLinks = document.querySelector('.nav-links');
 
+        mobileToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = 'var(--nav-height)';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'rgba(8, 12, 20, 0.95)';
+            navLinks.style.padding = '20px';
+            navLinks.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+            navLinks.style.backdropFilter = 'blur(10px)';
+        });
+
+        // Hide navigation if window is resized above mobile breakpoint
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+                navLinks.style.position = 'static';
+                navLinks.style.background = 'none';
+                navLinks.style.padding = '0';
+                navLinks.style.borderBottom = 'none';
+                navLinks.style.flexDirection = 'row';
+                navLinks.style.backdropFilter = 'none';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
