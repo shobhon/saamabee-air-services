@@ -1,27 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
+    <!-- Gold Gradient for Compass / Accommodations -->
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFF3D1" />
       <stop offset="50%" stop-color="#D4AF37" />
       <stop offset="100%" stop-color="#AA7C11" />
     </linearGradient>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0b132b" />
-      <stop offset="100%" stop-color="#050b14" />
+    
+    <!-- Cyan-Blue Gradient for Airplane / Air Tickets -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#1d4ed8" />
     </linearGradient>
+    
+    <!-- Background Gradient matching CSS Slate Navy -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#05080f" />
+    </linearGradient>
+    
+    <!-- Drop Shadow Filter for Glow Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
   </defs>
-  <!-- Rounded elegant background -->
+
+  <!-- 1. Rounded background matching premium CSS panels -->
   <rect width="512" height="512" rx="128" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="12" />
   
-  <!-- Stylized wings and star emblem -->
-  <g transform="translate(256, 270) scale(1.6)">
-    <!-- Right wing -->
-    <path d="M 0,0 C 35,-20 80,-20 110,-5 C 75,5 35,5 0,0 Z" fill="url(#goldGrad)" />
-    <!-- Left wing -->
-    <path d="M 0,0 C -35,-20 -80,-20 -110,-5 C -75,5 -35,5 0,0 Z" fill="url(#goldGrad)" />
-    <!-- Center star -->
-    <path d="M 0,-45 L 8,-20 L 33,-20 L 13,-5 L 20,20 L 0,5 L -20,20 L -13,-5 L -33,-20 L -8,-20 Z" fill="url(#goldGrad)" />
-    <!-- Tail fin shape -->
-    <path d="M -5,-8 L 0,-30 L 5,-8 L 2,0 L -2,0 Z" fill="url(#goldGrad)" opacity="0.8" />
+  <!-- 2. Elegant Navigation Compass (Gold) representing global stays -->
+  <g id="compass-emblem">
+    <!-- Outer Ring -->
+    <circle cx="256" cy="256" r="160" fill="none" stroke="url(#goldGrad)" stroke-width="10" opacity="0.9" />
+    
+    <!-- Dashed Inner Navigation Ring -->
+    <circle cx="256" cy="256" r="120" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-dasharray="10, 10" opacity="0.6" />
+    
+    <!-- Cardinal Directions (Triangles) -->
+    <!-- North -->
+    <polygon points="256,126 244,142 268,142" fill="url(#goldGrad)" />
+    <!-- South -->
+    <polygon points="256,386 244,370 268,370" fill="url(#goldGrad)" />
+    <!-- East -->
+    <polygon points="386,256 370,244 370,268" fill="url(#goldGrad)" />
+    <!-- West -->
+    <polygon points="126,256 142,244 142,268" fill="url(#goldGrad)" />
+  </g>
+  
+  <!-- 3. Sleek Diagonal Jetliner (Cyan) representing flights -->
+  <!-- Shifted slightly and rotated -45 deg (pointing top-right) -->
+  <g transform="translate(256, 256) rotate(-45)" filter="url(#glow)">
+    <path d="M 0,-150 L 15,-40 L 140,50 L 140,65 L 15,20 L 15,100 L 45,125 L 45,135 L 0,122 L -45,135 L -45,125 L -15,100 L -15,20 L -140,65 L -140,50 L -15,-40 Z" fill="url(#cyanGrad)" />
   </g>
 </svg>
