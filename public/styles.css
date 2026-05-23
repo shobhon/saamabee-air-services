@@ -949,11 +949,11 @@ footer {
     
     .ticket-grid, .accommodation-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
     }
     
     .accommodation-grid .service-info-panel {
-        order: -1; /* Keep text above cards on mobile */
+        order: -1; /* Keep description text above cards on tablets/mobiles */
     }
     
     .contact-container-grid {
@@ -962,30 +962,71 @@ footer {
     }
     
     .hero h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 }
 
 @media (max-width: 768px) {
+    /* Header Mobile Menu Transition */
     .nav-links {
-        display: none; /* In a simple production site, menu toggle handles this */
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        background: rgba(5, 8, 15, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 40px 24px;
+        gap: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition-smooth);
+        z-index: 999;
+    }
+    
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .nav-cta {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+        margin-top: 12px;
     }
     
     .mobile-toggle {
         display: block;
+        transition: var(--transition-fast);
     }
     
+    /* Hero adjustments */
     .hero {
         height: auto;
-        padding: 160px 0 100px 0;
+        padding: 160px 0 80px 0;
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
     
     .hero p {
         font-size: 1.1rem;
+        margin-bottom: 30px;
     }
     
     .section-header h2 {
@@ -1004,8 +1045,14 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    /* Fix grid spanned items inside single-column showcases on mobile */
+    #aircraft-card-3, #hotel-card-3 {
+        grid-column: span 1 !important;
+        aspect-ratio: 1 !important;
+    }
+    
     .service-info-panel, .contact-details, .contact-form-panel {
-        padding: 30px;
+        padding: 32px 24px;
     }
     
     .form-group-row {
@@ -1016,5 +1063,46 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+    
+    .logo-text {
+        font-size: 1.35rem;
+    }
+    
+    .logo-image {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .intro-visual {
+        aspect-ratio: 1.4 / 1;
+    }
+    
+    .contact-details, .contact-form-panel {
+        padding: 24px 16px;
     }
 }

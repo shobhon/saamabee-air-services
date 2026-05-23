@@ -211,37 +211,27 @@
         </div>
     </footer>
 
-    <!-- Simple Mobile Navigation Drawer Script (Identical to index.html) -->
     <script>
         const mobileToggle = document.getElementById('mobile-toggle-btn');
         const navLinks = document.querySelector('.nav-links');
 
         mobileToggle.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = 'var(--nav-height)';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'rgba(8, 12, 20, 0.95)';
-            navLinks.style.padding = '20px';
-            navLinks.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
-            navLinks.style.backdropFilter = 'blur(10px)';
+            navLinks.classList.toggle('open');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('open')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
         });
 
-        // Hide navigation if window is resized above mobile breakpoint
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                navLinks.style.display = 'flex';
-                navLinks.style.position = 'static';
-                navLinks.style.background = 'none';
-                navLinks.style.padding = '0';
-                navLinks.style.borderBottom = 'none';
-                navLinks.style.flexDirection = 'row';
-                navLinks.style.backdropFilter = 'none';
-            } else {
-                navLinks.style.display = 'none';
-            }
+        // Close menu when navigation link is clicked
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+            });
         });
     </script>
 </body>
