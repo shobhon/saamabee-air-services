@@ -3,7 +3,7 @@
     <!-- Cyan to Deep Cobalt Blue for the fuselage (sharp & elegant) -->
     <linearGradient id="fuselageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="60%" stop-color="#0284c7" />
       <stop offset="100%" stop-color="#1e3b8a" />
     </linearGradient>
     <!-- Premium Metallic Gold for the wings & tail -->
@@ -21,34 +21,62 @@
 
   <!-- Clean, sharp dark circular glass border -->
   <circle cx="256" cy="256" r="236" fill="rgba(11, 15, 26, 0.85)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="6" />
-  
-  <!-- Aerodynamic, sharp, modern jet plane silhouette -->
-  <g transform="translate(256, 256) rotate(-28)">
-    <!-- Rear Wing (Left Wing, behind body) -->
-    <path d="M -20,-20 L -140,-120 C -160,-130 -160,-120 -130,-90 L -10,0 Z" fill="url(#goldGrad)" opacity="0.85" />
-    
-    <!-- Vertical Tail Fin -->
-    <path d="M -130,-5 L -200,-50 C -210,-55 -210,-45 -180,-30 L -120,5 Z" fill="url(#goldGrad)" />
-    <!-- Horizontal Tail Fin -->
-    <path d="M -140,5 L -180,20 C -190,25 -190,20 -170,12 L -130,0 Z" fill="url(#goldGrad)" opacity="0.8" />
-    
-    <!-- Fuselage: Ultra-sleek supersonic jet shape -->
-    <path d="M 180,-6 C 140,-18 50,-24 -70,-20 C -130,-16 -170,0 -160,8 C -150,16 -110,22 -40,20 C 60,16 140,10 180,-6 Z" fill="url(#fuselageGrad)" filter="url(#subtleGlow)" />
-          
-    <!-- Sleek Cockpit and Window strip (High tech, single continuous curve) -->
-    <path d="M 140,-10 C 120,-14 90,-14 60,-12 C 85,-7 115,-7 140,-10 Z" fill="#ffffff" opacity="0.95" />
-    <path d="M 40,-10 C 20,-10 -60,-6 -100,-2 L -100,0 C -60,-4 20,-8 40,-10 Z" fill="#ffffff" opacity="0.8" />
 
-    <!-- Fore Wing (Right Wing, in front) -->
-    <path d="M 20,8 L 90,140 C 100,155 115,155 105,130 L 10,-2 Z" fill="url(#goldGrad)" filter="url(#subtleGlow)" />
-    
-    <!-- Elegant Engine Capsule under the Fore Wing -->
-    <path d="M 45,65 C 55,80 65,95 72,90 C 78,85 62,60 45,52 Z" fill="#0f172a" stroke="#d4af37" stroke-width="2.5" />
-    <!-- Jet Thrust Flame/Glow (Sharp & clean) -->
-    <polygon points="34,73 24,78 28,68 38,64" fill="#00f2fe" filter="url(#subtleGlow)" />
-  </g>
+  <!-- Speed lines in background -->
+  <path d="M 80,300 C 130,230 220,180 340,170" fill="none" stroke="rgba(0, 242, 254, 0.1)" stroke-width="4" stroke-dasharray="12 18" />
+  <path d="M 60,340 C 110,250 220,195 370,205" fill="none" stroke="rgba(212, 175, 55, 0.06)" stroke-width="3" stroke-dasharray="8 14" />
   
-  <!-- Subtle speed arcs in background representing aerodynamic wind flow -->
-  <path d="M 100,280 C 130,220 220,180 320,180" fill="none" stroke="rgba(0, 242, 254, 0.12)" stroke-width="4" stroke-dasharray="10 15" />
-  <path d="M 60,320 C 100,240 220,190 350,210" fill="none" stroke="rgba(212, 175, 55, 0.08)" stroke-width="3" stroke-dasharray="6 12" />
+  <!-- Realistic Commercial Airliner (tilted flying up-right) -->
+  <g transform="translate(25, 10)">
+    <!-- 1. Far Wing (Behind Fuselage) -->
+    <!-- Swept back wing with winglet -->
+    <path d="M 240,210 L 320,110 C 325,100 335,100 332,112 L 315,120 L 255,212 Z" fill="url(#goldGrad)" opacity="0.8" />
+    <!-- Far Engine -->
+    <path d="M 275,175 L 290,155 C 292,150 298,150 295,160 Z" fill="#0f172a" stroke="#d4af37" stroke-width="1.5" />
+    
+    <!-- 2. Tail Section (Rear fuselage stabilizers) -->
+    <!-- Horizontal Stabilizer (Far) -->
+    <path d="M 125,252 L 95,225 C 90,220 95,218 103,222 L 132,250 Z" fill="url(#goldGrad)" opacity="0.7" />
+    <!-- Horizontal Stabilizer (Near) -->
+    <path d="M 115,258 L 70,250 C 65,248 68,245 78,248 L 120,256 Z" fill="url(#goldGrad)" />
+    <!-- Vertical Tail Fin (Sleek commercial airliner vertical stabilizer) -->
+    <path d="M 130,250 L 90,135 C 85,120 95,120 105,130 L 140,242 Z" fill="url(#goldGrad)" />
+
+    <!-- 3. Fuselage (Main Cylindrical Body) -->
+    <!-- Standard passenger jet body shape: rounded cockpit nose, straight body, tapered tail cone -->
+    <path d="M 370,185 C 395,195 390,205 350,218 C 290,238 180,260 120,260 C 105,260 100,255 105,250 C 120,240 230,210 320,192 C 350,186 360,182 370,185 Z" fill="url(#fuselageGrad)" filter="url(#subtleGlow)" />
+          
+    <!-- 4. Cockpit Windshield (Sleek Airbus/Boeing wrap-around shape) -->
+    <path d="M 358,191 C 352,192 342,194 336,196 C 342,198 350,198 356,195 Z" fill="#ffffff" />
+    
+    <!-- 5. Passenger Windows (Individual circular ports - immediately communicates "real airliner") -->
+    <circle cx="318" cy="201" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="306" cy="204" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="294" cy="207" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="282" cy="210" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="270" cy="213" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="258" cy="216" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="246" cy="219" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="234" cy="222" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="222" cy="225" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="210" cy="228" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="198" cy="231" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="186" cy="234" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="174" cy="237" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="162" cy="240" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="150" cy="243" r="2.5" fill="#ffffff" opacity="0.9" />
+
+    <!-- 6. Near Wing (Sweeping down and forward with elegant modern winglet) -->
+    <path d="M 260,225 L 210,325 C 205,335 190,340 188,325 L 195,310 L 275,221 Z" fill="url(#goldGrad)" filter="url(#subtleGlow)" />
+    <!-- Winglet pointing gracefully upward -->
+    <path d="M 188,325 C 185,330 180,332 178,320 L 188,325 Z" fill="url(#goldGrad)" />
+    
+    <!-- 7. Near Engine (Turbofan Nacelle hanging realistically below the wing) -->
+    <!-- Sleek engine pod placed correctly below the wing leading edge -->
+    <rect x="222" y="262" width="34" height="18" rx="9" fill="#0f172a" stroke="#d4af37" stroke-width="3" transform="rotate(15 222 262)" />
+    <!-- Engine Intake Fan Glow -->
+    <ellipse cx="253" cy="272" rx="4" ry="7" fill="#00f2fe" opacity="0.9" filter="url(#subtleGlow)" transform="rotate(15 253 272)" />
+    <!-- Engine Exhaust Thrust (Sharp & clean) -->
+    <polygon points="214,272 202,274 205,268 216,267" fill="#00f2fe" filter="url(#subtleGlow)" />
+  </g>
 </svg>
